@@ -5,12 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171715">
-  <meta name="description" content="Explore the DIYAR-E-LIBAS Kadhar unstitched fabric collection.">
+  <meta name="description" content="Discover the DIYAR-E-LIBAS Kadhar unstitched fabric collection, designed for a refined personal style.">
   <title>Kadhar | DIYAR-E-LIBAS</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Product gallery: vertical thumbnails on the left */
     .gallery-layout {
       display: grid;
       grid-template-columns: 76px minmax(0, 1fr);
@@ -33,7 +32,8 @@
       border: 1px solid #d8cebc;
       background: #f1ece3;
       cursor: pointer;
-      opacity: .72;
+      opacity: .75;
+      transition: opacity .2s, border-color .2s;
     }
 
     .gallery-thumb.active,
@@ -61,6 +61,7 @@
       position: relative;
       overflow: hidden;
       min-width: 0;
+      background: #e8e0d2;
     }
 
     .main-image .image-counter {
@@ -78,6 +79,20 @@
     .gallery-thumb:focus-visible {
       outline: 2px solid #9b7b3c;
       outline-offset: 2px;
+    }
+
+    /* Benefits-led product heading */
+    .product-info h1 {
+      max-width: 650px;
+      font-size: clamp(38px, 4.5vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      overflow-wrap: anywhere;
+    }
+
+    .product-info .subtitle {
+      max-width: 540px;
+      line-height: 1.8;
     }
 
     /* FAQ */
@@ -171,6 +186,11 @@
         order: 1;
       }
 
+      .product-info h1 {
+        font-size: clamp(36px, 9vw, 48px);
+        letter-spacing: -1px;
+      }
+
       .faq-section {
         padding: 44px 18px;
       }
@@ -204,8 +224,8 @@
 
   <main id="product" class="product-layout">
 
-    <!-- LEFT: FIVE PRODUCT PHOTOS -->
-    <section class="gallery-column" aria-label="Product gallery">
+    <!-- LEFT: PRODUCT GALLERY -->
+    <section class="gallery-column" aria-label="Kadhar product gallery">
 
       <div class="gallery-layout">
 
@@ -234,7 +254,6 @@
           </span>
 
         </div>
-
       </div>
 
       <p class="gallery-caption">THE DETAILS MAKE THE DIFFERENCE</p>
@@ -246,10 +265,11 @@
 
       <p class="eyebrow">THE FABRIC COLLECTION / 02</p>
 
-      <h1>Kadhar</h1>
+      <h1>Elegance That Speaks for You.</h1>
 
       <p class="subtitle">
-        Texture and character, selected by you.
+        Choose Kadhar for a sophisticated look that brings confidence
+        and character to your personal style.
       </p>
 
       <div class="price-line">
@@ -283,10 +303,12 @@
           <span>FABRIC</span>
           <strong>Unstitched</strong>
         </div>
+
         <div>
           <span>STITCHING</span>
           <strong>Not included</strong>
         </div>
+
         <div>
           <span>LENGTH</span>
           <strong>To be confirmed</strong>
@@ -294,7 +316,7 @@
       </div>
 
       <p class="product-description">
-        Select your preferred colour to explore its product photos.
+        Choose your preferred Kadhar colour and explore the collection.
         Final fabric details, length and price will be added from
         verified product information.
       </p>
@@ -362,7 +384,6 @@
     <span>© <span class="year"></span> DIYAR-E-LIBAS</span>
   </footer>
 
-  <!-- Load the collection JavaScript once -->
   <script src="script.js"></script>
 
 </body>
