@@ -5,11 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171715">
-  <meta name="description" content="Discover the DIYAR-E-LIBAS Kadhar unstitched fabric collection, designed for a refined personal style.">
+  <meta name="description" content="Discover the DIYAR-E-LIBAS Kadhar unstitched fabric collection.">
   <title>Kadhar | DIYAR-E-LIBAS</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
+    /* PRODUCT GALLERY */
     .gallery-layout {
       display: grid;
       grid-template-columns: 76px minmax(0, 1fr);
@@ -32,7 +33,7 @@
       border: 1px solid #d8cebc;
       background: #f1ece3;
       cursor: pointer;
-      opacity: .75;
+      opacity: .8;
       transition: opacity .2s, border-color .2s;
     }
 
@@ -69,10 +70,11 @@
       right: 12px;
       bottom: 12px;
       z-index: 2;
-      background: rgba(23, 23, 21, .82);
+      background: rgba(23, 23, 21, .85);
       color: #fff;
-      padding: 6px 10px;
-      font-size: 11px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 600;
       letter-spacing: 1px;
     }
 
@@ -81,7 +83,7 @@
       outline-offset: 2px;
     }
 
-    /* Benefits-led product heading */
+    /* HEADLINE — PRESERVED */
     .product-info h1 {
       max-width: 650px;
       font-size: clamp(38px, 4.5vw, 66px);
@@ -90,9 +92,93 @@
       overflow-wrap: anywhere;
     }
 
+    /* SUBHEADLINE */
     .product-info .subtitle {
       max-width: 540px;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.85;
+      color: #514b43;
+    }
+
+    /* PRICE AND AVAILABILITY */
+    .product-info .price {
+      font-size: 19px;
+      font-weight: 700;
+      color: #171715;
+    }
+
+    .product-info .availability {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* COLOUR SECTION LABELS */
+    .product-info .field-heading {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    /* COLOUR NAMES */
+    .product-info .swatch-list .swatch {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* SELECTED COLOUR */
+    .product-info .selected-colour {
+      font-size: 15px;
+      font-weight: 500;
       line-height: 1.8;
+      color: #514b43;
+    }
+
+    .product-info .selected-colour strong {
+      font-weight: 700;
+      color: #171715;
+    }
+
+    .product-info .selected-product {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.8;
+      color: #514b43;
+    }
+
+    /* PRODUCT FACTS */
+    .product-info .product-facts > div > span {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    .product-info .product-facts > div > strong {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.7;
+      color: #171715;
+    }
+
+    /* PRODUCT DESCRIPTION */
+    .product-info .product-description {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.9;
+      color: #514b43;
+    }
+
+    /* ORDER BUTTON */
+    .product-info .primary-button {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .product-info .small-note {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.8;
+      color: #625c53;
     }
 
     /* FAQ */
@@ -109,7 +195,8 @@
 
     .faq-eyebrow {
       color: #9b7b3c;
-      font-size: 11px;
+      font-size: 12px;
+      font-weight: 600;
       letter-spacing: 3px;
       text-align: center;
     }
@@ -123,7 +210,10 @@
     }
 
     .faq-intro {
-      color: #756d61;
+      color: #625c53;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.8;
       text-align: center;
       margin-bottom: 30px;
     }
@@ -139,8 +229,9 @@
       gap: 16px;
       cursor: pointer;
       list-style: none;
+      font-size: 15px;
       font-weight: 600;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .faq-item summary::-webkit-details-marker {
@@ -151,6 +242,7 @@
       content: "+";
       color: #9b7b3c;
       font-size: 22px;
+      flex-shrink: 0;
     }
 
     .faq-item[open] summary::after {
@@ -158,12 +250,14 @@
     }
 
     .faq-item p {
-      color: #625c53;
+      color: #514b43;
       font-size: 14px;
-      line-height: 1.8;
+      font-weight: 500;
+      line-height: 1.9;
       margin: 14px 0 0;
     }
 
+    /* MOBILE */
     @media (max-width: 700px) {
       .gallery-layout {
         grid-template-columns: minmax(0, 1fr);
@@ -189,6 +283,26 @@
       .product-info h1 {
         font-size: clamp(36px, 9vw, 48px);
         letter-spacing: -1px;
+      }
+
+      .product-info .subtitle {
+        font-size: 16px;
+      }
+
+      .product-info .price {
+        font-size: 18px;
+      }
+
+      .product-info .selected-colour {
+        font-size: 15px;
+      }
+
+      .product-info .product-facts > div > strong {
+        font-size: 13px;
+      }
+
+      .product-info .product-description {
+        font-size: 15px;
       }
 
       .faq-section {
@@ -224,7 +338,6 @@
 
   <main id="product" class="product-layout">
 
-    <!-- LEFT: PRODUCT GALLERY -->
     <section class="gallery-column" aria-label="Kadhar product gallery">
 
       <div class="gallery-layout">
@@ -260,7 +373,6 @@
 
     </section>
 
-    <!-- RIGHT: PRODUCT DETAILS -->
     <section class="product-info">
 
       <p class="eyebrow">THE FABRIC COLLECTION / 02</p>
@@ -303,12 +415,10 @@
           <span>FABRIC</span>
           <strong>Unstitched</strong>
         </div>
-
         <div>
           <span>STITCHING</span>
           <strong>Not included</strong>
         </div>
-
         <div>
           <span>LENGTH</span>
           <strong>To be confirmed</strong>
@@ -333,7 +443,6 @@
     </section>
   </main>
 
-  <!-- FREQUENTLY ASKED QUESTIONS -->
   <section class="faq-section" id="faqs">
     <div class="faq-container">
 
