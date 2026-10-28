@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* PRODUCT GALLERY */
+    /* GALLERY */
     .gallery-layout {
       display: grid;
       grid-template-columns: 76px minmax(0, 1fr);
@@ -34,7 +34,6 @@
       background: #f1ece3;
       cursor: pointer;
       opacity: .8;
-      transition: opacity .2s, border-color .2s;
     }
 
     .gallery-thumb.active,
@@ -78,12 +77,7 @@
       letter-spacing: 1px;
     }
 
-    .gallery-thumb:focus-visible {
-      outline: 2px solid #9b7b3c;
-      outline-offset: 2px;
-    }
-
-    /* HEADLINE — PRESERVED */
+    /* KEEP HEADLINE DESIGN UNCHANGED */
     .product-info h1 {
       max-width: 650px;
       font-size: clamp(38px, 4.5vw, 66px);
@@ -92,93 +86,85 @@
       overflow-wrap: anywhere;
     }
 
-    /* SUBHEADLINE */
+    /* STRONGER TEXT STYLES */
     .product-info .subtitle {
-      max-width: 540px;
-      font-size: 17px;
-      font-weight: 500;
-      line-height: 1.85;
-      color: #514b43;
+      font-size: 17px !important;
+      font-weight: 500 !important;
+      line-height: 1.85 !important;
+      color: #514b43 !important;
     }
 
-    /* PRICE AND AVAILABILITY */
     .product-info .price {
-      font-size: 19px;
-      font-weight: 700;
-      color: #171715;
+      font-size: 19px !important;
+      font-weight: 700 !important;
+      color: #171715 !important;
     }
 
     .product-info .availability {
-      font-size: 13px;
-      font-weight: 500;
+      font-size: 13px !important;
+      font-weight: 500 !important;
     }
 
-    /* COLOUR SECTION LABELS */
     .product-info .field-heading {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.4px;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.4px !important;
     }
 
-    /* COLOUR NAMES */
     .product-info .swatch-list .swatch {
-      font-size: 13px;
-      font-weight: 500;
+      font-size: 13px !important;
+      font-weight: 500 !important;
     }
 
-    /* SELECTED COLOUR */
     .product-info .selected-colour {
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.8;
-      color: #514b43;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      line-height: 1.8 !important;
+      color: #514b43 !important;
     }
 
     .product-info .selected-colour strong {
-      font-weight: 700;
-      color: #171715;
+      font-weight: 700 !important;
+      color: #171715 !important;
     }
 
     .product-info .selected-product {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.8;
-      color: #514b43;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      line-height: 1.8 !important;
+      color: #514b43 !important;
     }
 
-    /* PRODUCT FACTS */
     .product-info .product-facts > div > span {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 1.2px !important;
     }
 
     .product-info .product-facts > div > strong {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.7;
-      color: #171715;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      line-height: 1.7 !important;
+      color: #171715 !important;
     }
 
-    /* PRODUCT DESCRIPTION */
     .product-info .product-description {
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.9;
-      color: #514b43;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      line-height: 1.9 !important;
+      color: #514b43 !important;
     }
 
-    /* ORDER BUTTON */
     .product-info .primary-button {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 15px !important;
+      font-weight: 600 !important;
     }
 
     .product-info .small-note {
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 1.8;
-      color: #625c53;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      line-height: 1.8 !important;
+      color: #625c53 !important;
     }
 
     /* FAQ */
@@ -286,23 +272,23 @@
       }
 
       .product-info .subtitle {
-        font-size: 16px;
+        font-size: 16px !important;
       }
 
       .product-info .price {
-        font-size: 18px;
+        font-size: 18px !important;
       }
 
       .product-info .selected-colour {
-        font-size: 15px;
+        font-size: 15px !important;
       }
 
       .product-info .product-facts > div > strong {
-        font-size: 13px;
+        font-size: 13px !important;
       }
 
       .product-info .product-description {
-        font-size: 15px;
+        font-size: 15px !important;
       }
 
       .faq-section {
@@ -339,7 +325,6 @@
   <main id="product" class="product-layout">
 
     <section class="gallery-column" aria-label="Kadhar product gallery">
-
       <div class="gallery-layout">
 
         <div
@@ -370,7 +355,6 @@
       </div>
 
       <p class="gallery-caption">THE DETAILS MAKE THE DIFFERENCE</p>
-
     </section>
 
     <section class="product-info">
@@ -447,7 +431,6 @@
     <div class="faq-container">
 
       <p class="faq-eyebrow">NEED HELP?</p>
-
       <h2>Frequently Asked Questions</h2>
 
       <p class="faq-intro">
