@@ -1,41 +1,369 @@
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171715"><title>Kadhar | DIYAR-E-LIBAS</title><link rel="stylesheet" href="style.css"></head><body class="collection-page">
-<div class="announcement">CRAFTED FOR THE WAY YOU CARRY YOURSELF</div><header class="site-header"><a class="wordmark" href="../">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a><nav><a href="../">Home</a><a href="../legend-cotton/">Legend Cotton</a><a href="../kadhar/">Kadhar</a><a href="../wash-n-wear/">Wash &amp; Wear</a></nav><a class="header-link" href="#product">Collection <span>↘</span></a></header>
-<main id="product" class="product-layout"><section class="gallery-column" aria-label="Product image"><div class="main-image" id="mainImage"><div class="image-placeholder"><span>KADHAR</span><small>Supplied product image will be connected here</small></div><span class="image-counter">01 / 06</span></div><p class="gallery-caption">THE DETAILS MAKE THE DIFFERENCE</p></section>
-<section class="product-info"><p class="eyebrow">THE FABRIC COLLECTION / 02</p><h1>Kadhar</h1><p class="subtitle">Texture and character, selected by you.</p><div class="price-line"><span class="price" id="productPrice">Price to be added</span><span class="availability">● Available options</span></div><div class="rule"></div><div class="field-heading"><span>SELECT COLOUR</span><span id="colourCount">6 options</span></div><div class="swatch-list" id="swatches" aria-label="Choose a colour"></div><p class="selected-colour">Selected: <strong id="selectedColour">Choose a colour</strong></p><div class="selected-product" id="selectedProduct">Select a colour to view its product image.</div><div class="product-facts"><div><span>FABRIC</span><strong>Unstitched</strong></div><div><span>STITCHING</span><strong>Not included</strong></div><div><span>LENGTH</span><strong>To be confirmed</strong></div></div><p class="product-description">Select your preferred colour to view its product photo. Final fabric details, length and price will be added from verified product information.</p><button class="primary-button" id="orderButton" type="button">Order details coming soon <span>→</span></button><p class="small-note">Product photography and verified ordering details will be added before launch.</p></section></main>
-<footer class="site-footer"><a class="wordmark" href="../">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a><a href="../">Back to home ↑</a><span>© <span class="year"></span> DIYAR-E-LIBAS</span></footer><script src="script.js"></script>
-<section class="faq-section" id="faqs">
-  <div class="faq-container">
-    <p class="faq-eyebrow">NEED HELP?</p>
-    <h2>Frequently Asked Questions</h2>
-    <p class="faq-intro">
-      Everything you need to know before choosing your fabric.
-    </p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171715">
+  <meta name="description" content="Explore the DIYAR-E-LIBAS Kadhar unstitched fabric collection.">
+  <title>Kadhar | DIYAR-E-LIBAS</title>
+  <link rel="stylesheet" href="style.css">
 
-    <details class="faq-item">
-      <summary>Is this a stitched suit or unstitched fabric?</summary>
-      <p>This product is unstitched fabric. It is not a ready-made suit.</p>
-    </details>
+  <style>
+    /* Product gallery: vertical thumbnails on the left */
+    .gallery-layout {
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
 
-    <details class="faq-item">
-      <summary>How do I choose my preferred colour?</summary>
-      <p>Select a colour swatch on the product page to view its corresponding product image.</p>
-    </details>
+    .thumbnail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-    <details class="faq-item">
-      <summary>What is the fabric length?</summary>
-      <p>Please confirm the fabric length listed for your selected product before placing your order.</p>
-    </details>
+    .gallery-thumb {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #d8cebc;
+      background: #f1ece3;
+      cursor: pointer;
+      opacity: .72;
+    }
 
-    <details class="faq-item">
-      <summary>Is stitching included in the price?</summary>
-      <p>No. This is unstitched fabric, and stitching is not included unless explicitly stated.</p>
-    </details>
+    .gallery-thumb.active,
+    .gallery-thumb[aria-pressed="true"] {
+      border: 2px solid #9b7b3c;
+      opacity: 1;
+    }
 
-    <details class="faq-item">
-      <summary>What are the delivery and return policies?</summary>
-      <p>Please check the store's confirmed delivery and return policies before ordering.</p>
-    </details>
+    .gallery-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #mainProductImage {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .main-image {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .main-image .image-counter {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      z-index: 2;
+      background: rgba(23, 23, 21, .82);
+      color: #fff;
+      padding: 6px 10px;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .gallery-thumb:focus-visible {
+      outline: 2px solid #9b7b3c;
+      outline-offset: 2px;
+    }
+
+    /* FAQ */
+    .faq-section {
+      background: #f8f5ef;
+      color: #171715;
+      padding: 64px 20px;
+    }
+
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-eyebrow {
+      color: #9b7b3c;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    .faq-section h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      text-align: center;
+      margin: 12px 0;
+    }
+
+    .faq-intro {
+      color: #756d61;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #d8cebc;
+      padding: 20px 0;
+    }
+
+    .faq-item summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      color: #9b7b3c;
+      font-size: 22px;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-item p {
+      color: #625c53;
+      font-size: 14px;
+      line-height: 1.8;
+      margin: 14px 0 0;
+    }
+
+    @media (max-width: 700px) {
+      .gallery-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .thumbnail-list {
+        order: 2;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 3px 2px 8px;
+      }
+
+      .gallery-thumb {
+        flex: 0 0 62px;
+        width: 62px;
+      }
+
+      .main-image {
+        order: 1;
+      }
+
+      .faq-section {
+        padding: 44px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body class="collection-page">
+
+  <div class="announcement">
+    CRAFTED FOR THE WAY YOU CARRY YOURSELF
   </div>
-</section>
-</body></html>
+
+  <header class="site-header">
+    <a class="wordmark" href="../">
+      DIYAR-E-LIBAS
+      <span>PREMIUM MENSWEAR</span>
+    </a>
+
+    <nav>
+      <a href="../">Home</a>
+      <a href="../legend-cotton/">Legend Cotton</a>
+      <a href="../kadhar/">Kadhar</a>
+      <a href="../wash-n-wear/">Wash &amp; Wear</a>
+    </nav>
+
+    <a class="header-link" href="#product">
+      Collection <span>↘</span>
+    </a>
+  </header>
+
+  <main id="product" class="product-layout">
+
+    <!-- LEFT: FIVE PRODUCT PHOTOS -->
+    <section class="gallery-column" aria-label="Product gallery">
+
+      <div class="gallery-layout">
+
+        <div
+          class="thumbnail-list"
+          id="thumbnailList"
+          aria-label="Choose a product photo">
+        </div>
+
+        <div class="main-image" id="mainImage">
+
+          <div class="image-placeholder" id="initialPlaceholder">
+            <span>KADHAR</span>
+            <small>Product photos will appear here</small>
+          </div>
+
+          <img
+            id="mainProductImage"
+            src="assets/images/colour-01-1.jpg"
+            alt="Kadhar unstitched fabric"
+            style="display:none"
+          >
+
+          <span class="image-counter" id="imageCounter">
+            01 / 05
+          </span>
+
+        </div>
+
+      </div>
+
+      <p class="gallery-caption">THE DETAILS MAKE THE DIFFERENCE</p>
+
+    </section>
+
+    <!-- RIGHT: PRODUCT DETAILS -->
+    <section class="product-info">
+
+      <p class="eyebrow">THE FABRIC COLLECTION / 02</p>
+
+      <h1>Kadhar</h1>
+
+      <p class="subtitle">
+        Texture and character, selected by you.
+      </p>
+
+      <div class="price-line">
+        <span class="price" id="productPrice">Price to be added</span>
+        <span class="availability">● Available options</span>
+      </div>
+
+      <div class="rule"></div>
+
+      <div class="field-heading">
+        <span>SELECT COLOUR</span>
+        <span id="colourCount">6 options</span>
+      </div>
+
+      <div
+        class="swatch-list"
+        id="swatches"
+        aria-label="Choose a colour">
+      </div>
+
+      <p class="selected-colour">
+        Selected: <strong id="selectedColour">Choose a colour</strong>
+      </p>
+
+      <div class="selected-product" id="selectedProduct">
+        Select a colour to view its product photos.
+      </div>
+
+      <div class="product-facts">
+        <div>
+          <span>FABRIC</span>
+          <strong>Unstitched</strong>
+        </div>
+        <div>
+          <span>STITCHING</span>
+          <strong>Not included</strong>
+        </div>
+        <div>
+          <span>LENGTH</span>
+          <strong>To be confirmed</strong>
+        </div>
+      </div>
+
+      <p class="product-description">
+        Select your preferred colour to explore its product photos.
+        Final fabric details, length and price will be added from
+        verified product information.
+      </p>
+
+      <button class="primary-button" id="orderButton" type="button">
+        Order details coming soon <span>→</span>
+      </button>
+
+      <p class="small-note">
+        Verified product information and ordering details will be
+        added before launch.
+      </p>
+
+    </section>
+  </main>
+
+  <!-- FREQUENTLY ASKED QUESTIONS -->
+  <section class="faq-section" id="faqs">
+    <div class="faq-container">
+
+      <p class="faq-eyebrow">NEED HELP?</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <p class="faq-intro">
+        Everything you need to know before choosing your fabric.
+      </p>
+
+      <details class="faq-item">
+        <summary>Is this a stitched suit or unstitched fabric?</summary>
+        <p>This product is unstitched fabric. It is not a ready-made suit.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I choose my preferred colour?</summary>
+        <p>Select a colour swatch to choose your preferred colour and view its product photos.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the fabric length?</summary>
+        <p>Please confirm the fabric length for your selected product before placing an order.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is stitching included in the price?</summary>
+        <p>No. This is unstitched fabric, and stitching is not included unless explicitly stated.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What are the delivery and return policies?</summary>
+        <p>Please check the store's confirmed delivery and return policies before ordering.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="../">
+      DIYAR-E-LIBAS
+      <span>PREMIUM MENSWEAR</span>
+    </a>
+
+    <a href="../">Back to home ↑</a>
+
+    <span>© <span class="year"></span> DIYAR-E-LIBAS</span>
+  </footer>
+
+  <!-- Load the collection JavaScript once -->
+  <script src="script.js"></script>
+
+</body>
+</html>
