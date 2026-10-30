@@ -6,40 +6,58 @@
   "length": null,
   "colors": [
     {
-      "id": "colour-01",
-      "name": "Colour 01",
-      "hex": "#e8dfce",
-      "image": "assets/images/colour-01.jpg"
+      "id": "powder-grey",
+      "name": "Powder Grey",
+      "hex": "#a6a6a8",
+      "images": [
+        "assets/images/powder-grey-front.jpg",
+        "assets/images/powder-grey-back.jpg",
+        "assets/images/powder-grey-fabric.jpg",
+        "assets/images/powder-grey-detail.jpg"
+      ]
     },
     {
-      "id": "colour-02",
-      "name": "Colour 02",
-      "hex": "#292929",
-      "image": "assets/images/colour-02.jpg"
+      "id": "crystal-blue",
+      "name": "Crystal Blue",
+      "hex": "#83a9d9",
+      "images": [
+        "assets/images/crystal-blue-front.jpg",
+        "assets/images/crystal-blue-back.jpg",
+        "assets/images/crystal-blue-fabric.jpg",
+        "assets/images/crystal-blue-detail.jpg"
+      ]
     },
     {
-      "id": "colour-03",
-      "name": "Colour 03",
-      "hex": "#26364a",
-      "image": "assets/images/colour-03.jpg"
+      "id": "powder-blue",
+      "name": "Powder Blue",
+      "hex": "#a9c5e8",
+      "images": [
+        "assets/images/powder-blue-front.jpg",
+        "assets/images/powder-blue-back.jpg",
+        "assets/images/powder-blue-fabric.jpg",
+        "assets/images/powder-blue-detail.jpg"
+      ]
     },
     {
-      "id": "colour-04",
-      "name": "Colour 04",
-      "hex": "#777a68",
-      "image": "assets/images/colour-04.jpg"
+      "id": "dust-taupe",
+      "name": "Dust Taupe",
+      "hex": "#9a8d84",
+      "images": [
+        "assets/images/dust-taupe-front.jpg",
+        "assets/images/dust-taupe-back.jpg",
+        "assets/images/dust-taupe-fabric.jpg",
+        "assets/images/dust-taupe-detail.jpg"
+      ]
     },
     {
-      "id": "colour-05",
-      "name": "Colour 05",
-      "hex": "#795d49",
-      "image": "assets/images/colour-05.jpg"
-    },
-    {
-      "id": "colour-06",
-      "name": "Colour 06",
-      "hex": "#f0eee7",
-      "image": "assets/images/colour-06.jpg"
+      "id": "soft-olive",
+      "name": "Soft Olive",
+      "hex": "#92967d",
+      "images": [
+        "assets/images/soft-olive-front.jpg",
+        "assets/images/soft-olive-back.jpg",
+        "assets/images/soft-olive-fabric.jpg"
+      ]
     }
   ]
 }
