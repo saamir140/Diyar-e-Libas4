@@ -376,40 +376,40 @@ img { max-width: 100%; }
 ========================================= */
 
 .legend-cotton-page {
-  --lc-ink: #252620;
-  --lc-paper: #F3EFE5;
-  --lc-white: #FBF9F3;
-  --lc-muted: #777268;
-  --lc-gold: #A58B60;
-  --lc-line: #DED5C5;
-  --lc-soft: #E8DECD;
+  --lc-ink: #182331;
+  --lc-paper: #F1F1EF;
+  --lc-white: #FFFFFF;
+  --lc-muted: #777777;
+  --lc-gold: #B7B7B0;
+  --lc-line: #D8DCE1;
+  --lc-soft: #E6E9ED;
 
-  background: #F3EFE5;
-  color: #252620;
+  background: #F1F1EF;
+  color: #182331;
 }
 
 /* MAIN PAGE BACKGROUND */
 .legend-cotton-page main {
-  background: #F3EFE5;
+  background: #F1F1EF;
 }
 
 .legend-cotton-page .site-header {
-  background: #FBF9F3;
-  border-color: #DED5C5;
+  background: #FFFFFF;
+  border-color: #D8DCE1;
 }
 
 .legend-cotton-page .announcement {
-  background: #252620;
-  color: #E8D9B9;
+  background: #182331;
+  color: #DCE3EB;
 }
 
 /* PRODUCT SECTION */
 .legend-cotton-page .product-layout {
-  background: #F3EFE5;
+  background: #F1F1EF;
 }
 
 .legend-cotton-page .main-image {
-  background: #E8DECD;
+  background: #E6E9ED;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -427,29 +427,29 @@ img { max-width: 100%; }
 }
 
 .legend-cotton-page .image-counter {
-  background: #FBF9F3E8;
-  color: #252620;
+  background: #FFFFFFE8;
+  color: #182331;
   border-radius: 5px;
 }
 
 /* PRODUCT TYPOGRAPHY */
 .legend-cotton-page .product-info h1 {
-  color: #252620;
+  color: #182331;
 }
 
 .legend-cotton-page .eyebrow,
 .legend-cotton-page .section-kicker,
 .legend-cotton-page .detail-label {
-  color: #8B754D;
+  color: #26364A;
 }
 
 /* PRICE */
 .legend-cotton-page .price {
-  color: #252620;
+  color: #182331;
 }
 
 .legend-cotton-page .availability {
-  color: #777B63;
+  color: #26364A;
 }
 
 /* COLOUR SELECTION */
@@ -460,38 +460,38 @@ img { max-width: 100%; }
 }
 
 .legend-cotton-page .swatch .swatch-colour {
-  border: 1px solid #C8BDAA;
+  border: 1px solid #B7B7B0;
 }
 
 .legend-cotton-page .swatch[aria-pressed="true"] {
-  background: #E8DECD;
-  border-color: #A58B60;
+  background: #E6E9ED;
+  border-color: #B7B7B0;
 }
 
 /* PRODUCT FACTS */
 .legend-cotton-page .product-facts {
-  border-color: #D8CEBD;
+  border-color: #D8DCE1;
 }
 
 /* PRIMARY BUTTON */
 .legend-cotton-page .primary-button {
-  background: #777B63;
+  background: #26364A;
   color: #FFFFFF;
   border-radius: 5px;
 }
 
 .legend-cotton-page .primary-button:hover {
-  background: #62664F;
+  background: #182331;
 }
 
 /* FABRIC DETAILS SECTION */
 .legend-cotton-page .fabric-section {
-  background: #E8DECD;
-  border-color: #D8CEBD;
+  background: #E6E9ED;
+  border-color: #D8DCE1;
 }
 
 .legend-cotton-page .detail-photo {
-  background: #F3EFE5;
+  background: #F1F1EF;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -502,12 +502,12 @@ img { max-width: 100%; }
 
 /* STYLING SECTION */
 .legend-cotton-page .style-section {
-  background: #777B63;
+  background: #26364A;
   color: #FFFFFF;
 }
 
 .legend-cotton-page .style-panel .section-kicker {
-  color: #E9D9B7;
+  color: #DCE3EB;
 }
 
 .legend-cotton-page .style-panel h2 {
@@ -515,55 +515,55 @@ img { max-width: 100%; }
 }
 
 .legend-cotton-page .style-panel p:not(.section-kicker) {
-  color: #F0EEE5;
+  color: #F1F1EF;
 }
 
 .legend-cotton-page .style-panel-mark {
-  color: #E9D9B7;
+  color: #DCE3EB;
 }
 
 .legend-cotton-page .style-side-note {
-  border-color: #A5A88F;
+  border-color: #8492A2;
 }
 
 .legend-cotton-page .style-side-note p {
-  color: #F4F0E6;
+  color: #F1F1EF;
 }
 
 .legend-cotton-page .side-note-number {
-  color: #E9D9B7;
+  color: #DCE3EB;
 }
 
 .legend-cotton-page .outline-button {
   color: #FFFFFF;
-  border-color: #D6C69F;
+  border-color: #B7B7B0;
 }
 
 /* SPECIFICATIONS */
 .legend-cotton-page .specifications-section {
-  background: #F3EFE5;
-  border-color: #D8CEBD;
+  background: #F1F1EF;
+  border-color: #D8DCE1;
 }
 
 .legend-cotton-page .spec-row {
-  border-color: #D8CEBD;
+  border-color: #D8DCE1;
 }
 
 /* ORDERING INFORMATION */
 .legend-cotton-page .ordering-section {
-  background: #E8DECD;
+  background: #E6E9ED;
 }
 
 .legend-cotton-page .policy-card {
-  background: #FBF9F3;
-  border-color: #D8CEBD;
+  background: #FFFFFF;
+  border-color: #D8DCE1;
   border-radius: 8px;
 }
 
 /* TRUST SECTION */
 .legend-cotton-page .trust-section {
-  background: #F3EFE5;
-  border-color: #D8CEBD;
+  background: #F1F1EF;
+  border-color: #D8DCE1;
 }
 
 .legend-cotton-page .trust-symbol {
@@ -572,21 +572,21 @@ img { max-width: 100%; }
 
 /* FAQ */
 .legend-cotton-page .faq-section {
-  background: #FBF9F3;
+  background: #FFFFFF;
 }
 
 .legend-cotton-page .faq-list,
 .legend-cotton-page .faq-item {
-  border-color: #DED5C5;
+  border-color: #D8DCE1;
 }
 
 .legend-cotton-page .faq-item summary::after {
-  color: #777B63;
+  color: #26364A;
 }
 
 /* FINAL CTA */
 .legend-cotton-page .final-cta {
-  background: #777B63;
+  background: #26364A;
   color: #FFFFFF;
 }
 
@@ -595,37 +595,37 @@ img { max-width: 100%; }
 }
 
 .legend-cotton-page .final-cta .section-kicker {
-  color: #E9D9B7;
+  color: #DCE3EB;
 }
 
 .legend-cotton-page .final-cta > p:not(.section-kicker) {
-  color: #F0EEE5;
+  color: #F1F1EF;
 }
 
 .legend-cotton-page .final-cta-button {
-  background: #F3EFE5;
-  color: #252620;
+  background: #F1F1EF;
+  color: #182331;
   border-radius: 5px;
 }
 
 .legend-cotton-page .final-cta-button span {
-  color: #777B63;
+  color: #26364A;
 }
 
 /* FOOTER */
 .legend-cotton-page .site-footer {
-  background: #252620;
-  color: #F3EFE5;
+  background: #182331;
+  color: #F1F1EF;
 }
 
 .legend-cotton-page .site-footer .wordmark span {
-  color: #D5BD8D;
+  color: #B7B7B0;
 }
 
 /* MOBILE POLISH */
 @media (max-width: 520px) {
   .legend-cotton-page .product-layout {
-    background: #F3EFE5;
+    background: #F1F1EF;
   }
 
   .legend-cotton-page .main-image {
@@ -647,3 +647,39 @@ img { max-width: 100%; }
   }
 }
 
+
+
+/* NAVY THEME — COLOUR FINISH ONLY */
+.legend-cotton-page .announcement,
+.legend-cotton-page .site-footer {
+  background-color: #182331;
+}
+.legend-cotton-page .site-header,
+.legend-cotton-page .faq-section,
+.legend-cotton-page .policy-card {
+  background-color: #FFFFFF;
+}
+.legend-cotton-page .product-layout,
+.legend-cotton-page .specifications-section,
+.legend-cotton-page .trust-section {
+  background-color: #F1F1EF;
+}
+.legend-cotton-page .announcement,
+.legend-cotton-page .site-footer,
+.legend-cotton-page .style-section,
+.legend-cotton-page .final-cta,
+.legend-cotton-page .primary-button,
+.legend-cotton-page .final-cta-button {
+  border-color: #26364A;
+}
+.legend-cotton-page .site-header nav a:hover,
+.legend-cotton-page .site-header nav a[aria-current="page"],
+.legend-cotton-page .header-link,
+.legend-cotton-page .wordmark span,
+.legend-cotton-page .eyebrow,
+.legend-cotton-page .section-kicker,
+.legend-cotton-page .detail-label,
+.legend-cotton-page .policy-number,
+.legend-cotton-page .faq-item summary::after {
+  color: #26364A;
+}
