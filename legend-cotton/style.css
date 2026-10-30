@@ -683,3 +683,82 @@ img { max-width: 100%; }
 .legend-cotton-page .faq-item summary::after {
   color: #26364A;
 }
+
+
+/* NAVY PALETTE — ADDITIONAL SUPPORTING COLOURS ONLY */
+.legend-cotton-page {
+  --lc-ink: #182331;
+  --lc-paper: #F1F1EF;
+  --lc-white: #FFFFFF;
+  --lc-muted: #687482;
+  --lc-gold: #8492A2;
+  --lc-line: #D8DCE1;
+  --lc-soft: #E6E9ED;
+}
+
+.legend-cotton-page .announcement {
+  color: #DCE3EB;
+}
+
+.legend-cotton-page .wordmark span,
+.legend-cotton-page .site-footer .wordmark span,
+.legend-cotton-page .primary-button span + span,
+.legend-cotton-page .final-cta-button span,
+.legend-cotton-page .sticky-cta-button b {
+  color: #B7C4D1;
+}
+
+.legend-cotton-page .availability,
+.legend-cotton-page .detail-dot,
+.legend-cotton-page .benefit-index,
+.legend-cotton-page .benefit-icon,
+.legend-cotton-page .included-notes p span,
+.legend-cotton-page .trust-symbol {
+  color: #536B83;
+}
+
+.legend-cotton-page .benefits-section,
+.legend-cotton-page .included-detail,
+.legend-cotton-page .ordering-section {
+  background-color: #E6E9ED;
+}
+
+.legend-cotton-page .benefit-card,
+.legend-cotton-page .policy-card,
+.legend-cotton-page .site-header,
+.legend-cotton-page .faq-section {
+  background-color: #FFFFFF;
+}
+
+.legend-cotton-page .main-image,
+.legend-cotton-page .detail-photo,
+.legend-cotton-page .gallery-thumb img,
+.legend-cotton-page .style-photo {
+  background-color: #E6E9ED;
+}
+
+.legend-cotton-page .swatch[aria-pressed="true"] {
+  background-color: #E6E9ED;
+  border-color: #8492A2;
+}
+
+.legend-cotton-page .image-counter,
+.legend-cotton-page .style-photo span {
+  background-color: #FFFFFFE8;
+  color: #182331;
+}
+
+.legend-cotton-page .policy-card,
+.legend-cotton-page .benefit-card,
+.legend-cotton-page .included-detail {
+  border-color: #D8DCE1;
+}
+
+.legend-cotton-page .mobile-sticky-cta {
+  background-color: #FFFFFF;
+  border-top-color: #D8DCE1;
+}
+
+.legend-cotton-page .sticky-cta-button {
+  background-color: #26364A;
+}
