@@ -369,3 +369,281 @@ img { max-width: 100%; }
   .sticky-cta-button b { color: #d8bb83; margin-left: 12px; }
   body.legend-cotton-page { padding-bottom: 68px; }
 }
+/* =========================================
+   DIYAR-E-LIBAS
+   LEGEND WINTER COTTON
+   WARM IVORY + SAND BEIGE + MUTED OLIVE
+========================================= */
+
+.legend-cotton-page {
+  --lc-ink: #252620;
+  --lc-paper: #F3EFE5;
+  --lc-white: #FBF9F3;
+  --lc-muted: #777268;
+  --lc-gold: #A58B60;
+  --lc-line: #DED5C5;
+  --lc-soft: #E8DECD;
+
+  background: #F3EFE5;
+  color: #252620;
+}
+
+/* MAIN PAGE BACKGROUND */
+.legend-cotton-page main {
+  background: #F3EFE5;
+}
+
+.legend-cotton-page .site-header {
+  background: #FBF9F3;
+  border-color: #DED5C5;
+}
+
+.legend-cotton-page .announcement {
+  background: #252620;
+  color: #E8D9B9;
+}
+
+/* PRODUCT SECTION */
+.legend-cotton-page .product-layout {
+  background: #F3EFE5;
+}
+
+.legend-cotton-page .main-image {
+  background: #E8DECD;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.legend-cotton-page .main-image img {
+  border-radius: 12px;
+}
+
+.legend-cotton-page .gallery-thumb {
+  border-radius: 8px;
+}
+
+.legend-cotton-page .gallery-thumb img {
+  border-radius: 7px;
+}
+
+.legend-cotton-page .image-counter {
+  background: #FBF9F3E8;
+  color: #252620;
+  border-radius: 5px;
+}
+
+/* PRODUCT TYPOGRAPHY */
+.legend-cotton-page .product-info h1 {
+  color: #252620;
+}
+
+.legend-cotton-page .eyebrow,
+.legend-cotton-page .section-kicker,
+.legend-cotton-page .detail-label {
+  color: #8B754D;
+}
+
+/* PRICE */
+.legend-cotton-page .price {
+  color: #252620;
+}
+
+.legend-cotton-page .availability {
+  color: #777B63;
+}
+
+/* COLOUR SELECTION */
+.legend-cotton-page .swatch {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.legend-cotton-page .swatch .swatch-colour {
+  border: 1px solid #C8BDAA;
+}
+
+.legend-cotton-page .swatch[aria-pressed="true"] {
+  background: #E8DECD;
+  border-color: #A58B60;
+}
+
+/* PRODUCT FACTS */
+.legend-cotton-page .product-facts {
+  border-color: #D8CEBD;
+}
+
+/* PRIMARY BUTTON */
+.legend-cotton-page .primary-button {
+  background: #777B63;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.legend-cotton-page .primary-button:hover {
+  background: #62664F;
+}
+
+/* FABRIC DETAILS SECTION */
+.legend-cotton-page .fabric-section {
+  background: #E8DECD;
+  border-color: #D8CEBD;
+}
+
+.legend-cotton-page .detail-photo {
+  background: #F3EFE5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.legend-cotton-page .detail-photo img {
+  border-radius: 10px;
+}
+
+/* STYLING SECTION */
+.legend-cotton-page .style-section {
+  background: #777B63;
+  color: #FFFFFF;
+}
+
+.legend-cotton-page .style-panel .section-kicker {
+  color: #E9D9B7;
+}
+
+.legend-cotton-page .style-panel h2 {
+  color: #FFFFFF;
+}
+
+.legend-cotton-page .style-panel p:not(.section-kicker) {
+  color: #F0EEE5;
+}
+
+.legend-cotton-page .style-panel-mark {
+  color: #E9D9B7;
+}
+
+.legend-cotton-page .style-side-note {
+  border-color: #A5A88F;
+}
+
+.legend-cotton-page .style-side-note p {
+  color: #F4F0E6;
+}
+
+.legend-cotton-page .side-note-number {
+  color: #E9D9B7;
+}
+
+.legend-cotton-page .outline-button {
+  color: #FFFFFF;
+  border-color: #D6C69F;
+}
+
+/* SPECIFICATIONS */
+.legend-cotton-page .specifications-section {
+  background: #F3EFE5;
+  border-color: #D8CEBD;
+}
+
+.legend-cotton-page .spec-row {
+  border-color: #D8CEBD;
+}
+
+/* ORDERING INFORMATION */
+.legend-cotton-page .ordering-section {
+  background: #E8DECD;
+}
+
+.legend-cotton-page .policy-card {
+  background: #FBF9F3;
+  border-color: #D8CEBD;
+  border-radius: 8px;
+}
+
+/* TRUST SECTION */
+.legend-cotton-page .trust-section {
+  background: #F3EFE5;
+  border-color: #D8CEBD;
+}
+
+.legend-cotton-page .trust-symbol {
+  color: #8B8F72;
+}
+
+/* FAQ */
+.legend-cotton-page .faq-section {
+  background: #FBF9F3;
+}
+
+.legend-cotton-page .faq-list,
+.legend-cotton-page .faq-item {
+  border-color: #DED5C5;
+}
+
+.legend-cotton-page .faq-item summary::after {
+  color: #777B63;
+}
+
+/* FINAL CTA */
+.legend-cotton-page .final-cta {
+  background: #777B63;
+  color: #FFFFFF;
+}
+
+.legend-cotton-page .final-cta h2 {
+  color: #FFFFFF;
+}
+
+.legend-cotton-page .final-cta .section-kicker {
+  color: #E9D9B7;
+}
+
+.legend-cotton-page .final-cta > p:not(.section-kicker) {
+  color: #F0EEE5;
+}
+
+.legend-cotton-page .final-cta-button {
+  background: #F3EFE5;
+  color: #252620;
+  border-radius: 5px;
+}
+
+.legend-cotton-page .final-cta-button span {
+  color: #777B63;
+}
+
+/* FOOTER */
+.legend-cotton-page .site-footer {
+  background: #252620;
+  color: #F3EFE5;
+}
+
+.legend-cotton-page .site-footer .wordmark span {
+  color: #D5BD8D;
+}
+
+/* MOBILE POLISH */
+@media (max-width: 520px) {
+  .legend-cotton-page .product-layout {
+    background: #F3EFE5;
+  }
+
+  .legend-cotton-page .main-image {
+    border-radius: 10px;
+  }
+
+  .legend-cotton-page .fabric-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .legend-cotton-page .style-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .legend-cotton-page .policy-card {
+    border-radius: 7px;
+  }
+}
+
