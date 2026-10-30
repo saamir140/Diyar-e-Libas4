@@ -300,3 +300,131 @@ img { max-width: 100%; }
     font-size: 9px;
   }
 }
+
+
+/* =========================================================
+   LEGEND WINTER COTTON — MOBILE GALLERY & COLOUR SWATCH FIX
+   Scoped to this collection page only.
+   ========================================================= */
+.legend-cotton-page .main-image {
+  aspect-ratio: 2 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e9e5dd;
+}
+.legend-cotton-page .main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+.legend-cotton-page .gallery-thumb {
+  border-radius: 9px;
+}
+.legend-cotton-page .gallery-thumb img {
+  border-radius: 8px;
+}
+.legend-cotton-page .detail-photo,
+.legend-cotton-page .detail-photo img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.legend-cotton-page .swatch-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+  margin: 22px 0 12px;
+}
+.legend-cotton-page .swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding: 5px 2px 8px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--lc-ink);
+  text-align: center;
+  font: 500 11px/1.35 var(--lc-sans);
+  overflow: visible;
+}
+.legend-cotton-page .swatch .swatch-colour {
+  display: block;
+  width: 42px;
+  max-width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  margin: 0;
+  border: 1px solid rgba(23, 23, 21, .18);
+  border-radius: 50%;
+  outline: 1px solid transparent;
+  outline-offset: 4px;
+}
+.legend-cotton-page .swatch[aria-pressed="true"] .swatch-colour {
+  outline: 1px solid var(--lc-gold);
+}
+.legend-cotton-page .swatch > span:last-child {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: normal;
+  word-break: normal;
+  white-space: normal;
+}
+.legend-cotton-page .swatch[aria-pressed="true"] > span:last-child {
+  font-weight: 700;
+}
+.legend-cotton-page .swatch:focus-visible {
+  outline: 2px solid var(--lc-gold);
+  outline-offset: 3px;
+}
+@media (max-width: 520px) {
+  .legend-cotton-page .main-image {
+    aspect-ratio: 2 / 3;
+    border-radius: 11px;
+  }
+  .legend-cotton-page .gallery-thumbnails {
+    gap: 7px;
+    margin-top: 11px;
+  }
+  .legend-cotton-page .gallery-thumb {
+    border: 1px solid transparent;
+    padding: 0 0 6px;
+    border-radius: 9px;
+  }
+  .legend-cotton-page .gallery-thumb img {
+    aspect-ratio: 3 / 4;
+    border-radius: 7px;
+  }
+  .legend-cotton-page .gallery-thumb span {
+    font-size: 8px;
+    line-height: 1.35;
+  }
+  .legend-cotton-page .swatch-list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 5px;
+    margin-top: 20px;
+  }
+  .legend-cotton-page .swatch {
+    gap: 9px;
+    padding: 5px 0;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+  .legend-cotton-page .swatch .swatch-colour {
+    width: 34px;
+    height: 34px;
+    max-width: 34px;
+    flex-basis: 34px;
+  }
+  .legend-cotton-page .selected-colour {
+    margin-top: 17px;
+    font-size: 13px;
+  }
+}
