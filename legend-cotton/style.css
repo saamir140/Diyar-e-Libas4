@@ -886,3 +886,369 @@ body.legend-cotton-page { padding-bottom:92px; }
   .purchase-controls { margin-top:17px; }
   body.legend-cotton-page { padding-bottom:82px; }
 }
+
+/* =====================================================
+   DIYAR-E-LIBAS — VISUAL HIERARCHY & RESPONSIVE CART FIX
+   Colour and presentation overrides only; no gallery or
+   product-image sizing/position rules are changed here.
+===================================================== */
+:root {
+  --dl-navy: #182B43;
+  --dl-blue: #315F8C;
+  --dl-blue-light: #EAF1F8;
+  --dl-gold: #C18A43;
+  --dl-cream: #F8F6F1;
+  --dl-ink: #17283D;
+}
+
+.legend-cotton-page {
+  background: var(--dl-cream);
+  color: var(--dl-ink);
+}
+.legend-cotton-page main { background: var(--dl-cream); }
+.legend-cotton-page .announcement {
+  background: var(--dl-navy);
+  color: #F5E8D4;
+  font-weight: 700;
+}
+.legend-cotton-page .site-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #D9E1E9;
+}
+.legend-cotton-page .wordmark span { color: var(--dl-gold); }
+.legend-cotton-page .site-header nav a[aria-current="page"] {
+  color: var(--dl-blue);
+  font-weight: 700;
+}
+.legend-cotton-page .header-link {
+  color: var(--dl-blue);
+  border-color: var(--dl-gold);
+  font-weight: 700;
+}
+
+/* Product information: one clear focal panel, stronger type contrast */
+.legend-cotton-page .product-info {
+  padding: 30px 30px 28px;
+  background: #FFFFFF;
+  border: 1px solid #DCE4EC;
+  border-top: 4px solid var(--dl-blue);
+  border-radius: 12px;
+  box-shadow: 0 14px 38px rgba(24,43,67,.08);
+}
+.legend-cotton-page .eyebrow,
+.legend-cotton-page .section-kicker,
+.legend-cotton-page .detail-label {
+  color: var(--dl-blue);
+}
+.legend-cotton-page .product-info h1 {
+  color: var(--dl-navy);
+  font-size: clamp(40px, 4.2vw, 58px);
+  line-height: 1.06;
+  margin-top: 14px;
+}
+.legend-cotton-page .subtitle {
+  color: #52657A;
+  font-size: 15px;
+}
+.legend-cotton-page .price-line {
+  margin: 20px 0 22px;
+  padding: 15px 17px;
+  background: var(--dl-blue-light);
+  border-left: 4px solid var(--dl-gold);
+  border-radius: 6px;
+}
+.legend-cotton-page .price {
+  color: var(--dl-navy);
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+.legend-cotton-page .availability {
+  color: var(--dl-blue);
+  font-weight: 700;
+}
+.legend-cotton-page .rule { background: #DCE4EC; margin: 21px 0; }
+.legend-cotton-page .field-heading {
+  color: var(--dl-navy);
+  font-size: 11px;
+  letter-spacing: .15em;
+}
+.legend-cotton-page .field-heading span + span {
+  color: var(--dl-blue);
+  font-weight: 700;
+}
+.legend-cotton-page .colour-help {
+  background: #F0F5FA;
+  border-left-color: var(--dl-gold);
+  color: #294866;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 14px;
+}
+.legend-cotton-page .selected-colour {
+  color: #53657A;
+  font-size: 14px;
+}
+.legend-cotton-page .selected-colour strong { color: var(--dl-navy); }
+.legend-cotton-page .selected-product {
+  color: #607287;
+  font-size: 12px;
+}
+.legend-cotton-page .swatch {
+  color: var(--dl-navy);
+  border-radius: 9px;
+}
+.legend-cotton-page .swatch[aria-pressed="true"] {
+  background: #EAF1F8;
+  border-color: var(--dl-blue);
+  box-shadow: 0 5px 15px rgba(49,95,140,.13);
+}
+.legend-cotton-page .swatch[aria-pressed="true"] .swatch-colour {
+  outline-color: var(--dl-blue);
+}
+.legend-cotton-page .product-facts {
+  border-color: #D8E1EA;
+  background: #F7F9FC;
+  padding: 18px 15px;
+  border-radius: 7px;
+}
+.legend-cotton-page .product-facts span {
+  color: #60758B;
+  font-weight: 700;
+}
+.legend-cotton-page .product-facts strong {
+  color: var(--dl-navy);
+  font-size: 13px;
+}
+.legend-cotton-page .product-description {
+  color: #40546A;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Purchase actions are the strongest elements in the product panel */
+.legend-cotton-page .purchase-controls {
+  margin: 23px 0 12px;
+  padding: 15px 16px;
+  background: #F0F5FA;
+  border: 1px solid #CAD8E6;
+  border-radius: 8px;
+}
+.legend-cotton-page .purchase-label {
+  color: var(--dl-navy);
+  font-size: 11px;
+  font-weight: 800;
+}
+.legend-cotton-page .product-quantity button {
+  width: 39px;
+  height: 39px;
+  border: 1px solid #9EB2C7;
+  background: #FFFFFF;
+  color: var(--dl-navy);
+  font-weight: 700;
+}
+.legend-cotton-page .primary-button {
+  min-height: 60px;
+  margin-top: 0;
+  padding: 18px 21px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--dl-navy);
+  color: #FFFFFF;
+  box-shadow: 0 8px 18px rgba(24,43,67,.18);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+.legend-cotton-page .primary-button:hover { background: #24466A; }
+.legend-cotton-page .primary-button span + span {
+  color: #F2C47D;
+  font-size: 21px;
+}
+.legend-cotton-page .buy-now-button {
+  min-height: 62px;
+  margin-top: 12px;
+  padding: 18px 21px;
+  border: 2px solid var(--dl-gold);
+  border-radius: 7px;
+  background: var(--dl-gold);
+  color: #17283D;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .025em;
+  box-shadow: 0 8px 18px rgba(193,138,67,.2);
+}
+.legend-cotton-page .buy-now-button:hover {
+  background: #D49A4D;
+  border-color: #D49A4D;
+  color: #14263B;
+}
+.legend-cotton-page .buy-now-button span { font-size: 20px; }
+.legend-cotton-page .cart-inline-note {
+  color: #50657B;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.legend-cotton-page .small-note {
+  color: #65768A;
+  font-size: 11px;
+}
+
+/* Stronger contrast and rhythm in the remaining page sections */
+.legend-cotton-page .benefits-section,
+.legend-cotton-page .ordering-section {
+  background: #EAF1F8;
+}
+.legend-cotton-page .benefit-card,
+.legend-cotton-page .policy-card {
+  background: #FFFFFF;
+  border: 1px solid #D5E0EA;
+  border-top: 3px solid var(--dl-blue);
+  box-shadow: 0 8px 22px rgba(24,43,67,.055);
+}
+.legend-cotton-page .benefit-card h3,
+.legend-cotton-page .policy-card h3 { color: var(--dl-navy); }
+.legend-cotton-page .benefit-card p,
+.legend-cotton-page .policy-card p { color: #50647A; }
+.legend-cotton-page .included-detail {
+  background: #EAF1F8;
+  border-color: #D5E0EA;
+}
+.legend-cotton-page .style-section,
+.legend-cotton-page .final-cta {
+  background: var(--dl-navy);
+}
+.legend-cotton-page .style-panel .section-kicker,
+.legend-cotton-page .final-cta .section-kicker { color: #F2C47D; }
+.legend-cotton-page .final-cta-button {
+  background: var(--dl-gold);
+  color: #17283D;
+  font-weight: 800;
+}
+.legend-cotton-page .final-cta-button span { color: #17283D; }
+.legend-cotton-page .trust-symbol,
+.legend-cotton-page .benefit-icon,
+.legend-cotton-page .benefit-index { color: var(--dl-gold); }
+.legend-cotton-page .faq-section { background: #FFFFFF; }
+.legend-cotton-page .faq-item summary { color: var(--dl-navy); }
+.legend-cotton-page .faq-item p { color: #50647A; }
+.legend-cotton-page .site-footer { background: #122237; }
+
+/* Cart drawer hierarchy */
+.cart-drawer { border-left: 5px solid var(--dl-blue); }
+.cart-drawer-header h2,
+.checkout-heading h2 { color: var(--dl-navy); }
+.cart-summary .cart-grand-total strong { color: var(--dl-navy); }
+.checkout-button {
+  min-height: 54px;
+  background: var(--dl-navy);
+  font-size: 13px;
+  font-weight: 800;
+}
+.checkout-button:hover { background: #24466A; }
+
+/* FIX: remove inherited width:100% from the two sticky-bar buttons.
+   This was forcing both buttons to occupy the same row width and overlap. */
+.mobile-sticky-cta {
+  width: min(700px, calc(100% - 32px));
+  min-height: 76px;
+  padding: 10px 12px;
+  gap: 12px;
+  align-items: stretch;
+  background: #FFFFFF;
+  border: 1px solid #C9D6E3;
+  border-top: 4px solid var(--dl-blue);
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(18,34,55,.2);
+}
+.mobile-sticky-cta button {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+}
+.mobile-sticky-cta .sticky-view-cart {
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  padding: 5px 8px;
+  gap: 8px;
+}
+.mobile-sticky-cta .sticky-cta-copy {
+  min-width: 0;
+  white-space: nowrap;
+}
+.mobile-sticky-cta .sticky-cta-copy small {
+  color: var(--dl-blue);
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.mobile-sticky-cta .sticky-cta-copy strong {
+  color: var(--dl-navy);
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+.mobile-sticky-cta .sticky-cta-button {
+  flex: 0 0 auto;
+  padding: 10px 12px;
+  background: #EAF1F8;
+  color: var(--dl-navy);
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.mobile-sticky-cta .sticky-buy-now {
+  flex: 0 0 39%;
+  width: auto;
+  min-width: 120px;
+  min-height: 52px;
+  padding: 0 19px;
+  background: var(--dl-gold);
+  color: #17283D;
+  border: 0;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 5px 13px rgba(193,138,67,.23);
+}
+.mobile-sticky-cta .sticky-buy-now:hover { background: #D49A4D; }
+body.legend-cotton-page { padding-bottom: 112px; }
+
+@media (max-width: 850px) {
+  .legend-cotton-page .product-info { padding: 24px 22px; }
+}
+@media (max-width: 520px) {
+  .legend-cotton-page .product-info {
+    padding: 21px 16px 22px;
+    border-radius: 10px;
+  }
+  .legend-cotton-page .product-info h1 { font-size: 39px; }
+  .legend-cotton-page .price { font-size: 25px; }
+  .legend-cotton-page .product-facts { padding: 15px 10px; gap: 7px; }
+  .legend-cotton-page .product-facts strong { font-size: 11px; }
+  .legend-cotton-page .primary-button { min-height: 57px; font-size: 13px; }
+  .legend-cotton-page .buy-now-button { min-height: 60px; font-size: 15px; }
+  .mobile-sticky-cta {
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    width: calc(100% - 16px);
+    min-height: 68px;
+    padding: 7px;
+    gap: 6px;
+  }
+  .mobile-sticky-cta .sticky-view-cart { padding: 3px 5px; }
+  .mobile-sticky-cta .sticky-cta-copy small { font-size: 7px; }
+  .mobile-sticky-cta .sticky-cta-copy strong { font-size: 10px; }
+  .mobile-sticky-cta .sticky-cta-button { padding: 8px 7px; font-size: 9px; }
+  .mobile-sticky-cta .sticky-buy-now {
+    flex-basis: 37%;
+    min-width: 108px;
+    min-height: 48px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  body.legend-cotton-page { padding-bottom: 94px; }
+}
