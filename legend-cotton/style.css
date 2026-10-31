@@ -1252,3 +1252,35 @@ body.legend-cotton-page { padding-bottom: 112px; }
   }
   body.legend-cotton-page { padding-bottom: 94px; }
 }
+
+
+/* REQUESTED UPDATE: green Buy Now buttons + colour variation notice */
+.legend-cotton-page .buy-now-button {
+  background: #16834A;
+  border-color: #16834A;
+  color: #FFFFFF;
+  box-shadow: 0 8px 18px rgba(22,131,74,.22);
+}
+.legend-cotton-page .buy-now-button:hover {
+  background: #116B3C;
+  border-color: #116B3C;
+  color: #FFFFFF;
+}
+.legend-cotton-page .buy-now-button span { color: #FFFFFF; }
+.legend-cotton-page .mobile-sticky-cta .sticky-buy-now {
+  background: #16834A;
+  color: #FFFFFF;
+  box-shadow: 0 5px 13px rgba(22,131,74,.24);
+}
+.legend-cotton-page .mobile-sticky-cta .sticky-buy-now:hover {
+  background: #116B3C;
+}
+.legend-cotton-page .colour-variation-note {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid #8492A2;
+  background: #E6E9ED;
+  color: #405064;
+  font-size: 11px;
+  line-height: 1.65;
+}
