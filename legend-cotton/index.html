@@ -3,299 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171715">
+  <meta name="theme-color" content="#f5f2eb">
   <meta name="description" content="Discover Legend Winter Cotton by DIYAR-E-LIBAS — 4 metre unstitched Cotton Khaddar Blend for winter.">
   <title>Legend Winter Cotton | DIYAR-E-LIBAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="collection-page legend-cotton-page">
-  <div class="announcement">CRAFTED FOR THE WAY YOU CARRY YOURSELF</div>
-
+<body class="legend-cotton-page">
+  <div class="announcement">PAKISTAN-WIDE DELIVERY <span>·</span> RS. 200 DELIVERY <span>·</span> FREE ON 2 OR MORE SUITS</div>
   <header class="site-header">
     <a class="wordmark" href="../" aria-label="DIYAR-E-LIBAS home">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a>
-    <nav aria-label="Main navigation">
-      <a href="../">Home</a>
-      <a href="../legend-cotton/" aria-current="page">Legend Cotton</a>
-      <a href="../kadhar/">Kadhar</a>
-      <a href="../wash-n-wear/">Wash &amp; Wear</a>
-    </nav>
-    <button class="header-link cart-header-button" id="openCartButton" type="button">Cart <span id="cartCount">0</span> <span aria-hidden="true">↗</span></button>
+    <nav aria-label="Main navigation"><a href="../">Home</a><a href="../legend-cotton/" aria-current="page">Legend Cotton</a><a href="../kadhar/">Kadhar</a><a href="../wash-n-wear/">Wash &amp; Wear</a></nav>
+    <button class="header-cart" id="openCartButton" type="button">Bag <span id="cartCount">0</span> <span aria-hidden="true">↗</span></button>
   </header>
 
   <main>
-    <section id="product" class="product-layout" aria-labelledby="productTitle">
+    <section class="product-shell" id="product" aria-labelledby="productTitle">
       <div class="gallery-column">
         <div class="main-image" id="mainImage" aria-live="polite">
-          <div class="image-placeholder">
-            <span>LEGEND WINTER COTTON</span>
-            <small>Choose a colour to view its product photo</small>
-          </div>
-          <span class="image-counter">01 / 06</span>
+          <div class="image-placeholder"><span>LEGEND WINTER COTTON</span><small>Choose a colour to view its product photo</small></div>
+          <span class="image-counter">01 / 04</span>
         </div>
         <div class="gallery-thumbnails" id="galleryThumbnails" aria-label="More product photos"></div>
         <p class="gallery-caption">THE DETAILS MAKE THE DIFFERENCE</p>
       </div>
 
       <div class="product-info">
-        <p class="eyebrow">THE WINTER FABRIC COLLECTION / 01</p>
+        <p class="eyebrow">THE WINTER FABRIC COLLECTION <span>·</span> 01</p>
         <h1 id="productTitle">Legend Winter Cotton</h1>
-        <p class="subtitle">Soft Warmth for Winter.</p>
+        <p class="subtitle">Soft warmth for winter.</p>
+        <div class="price-block"><strong class="price" id="productPrice">Rs. 3,499</strong><span>PER SUIT <b>·</b> 4 METRES</span></div>
 
-        <div class="price-line">
-          <span class="price" id="productPrice">Rs. 3,499</span>
-          <span class="availability" id="availabilityText">Explore colour options</span>
+        <div class="assurance-strip" aria-label="Ordering information">
+          <div><span class="assurance-icon">↗</span><strong>Delivery</strong><small>Rs. 200 · Free on 2+</small></div>
+          <div><span class="assurance-icon">◇</span><strong>Unstitched</strong><small>4 metre cutting</small></div>
+          <div><span class="assurance-icon">✳</span><strong>Stitching</strong><small>Not included</small></div>
         </div>
 
-        <div class="rule"></div>
-
-        <div class="field-heading">
-          <span>SELECT YOUR COLOUR</span>
-          <span id="colourCount">6 options</span>
-        </div>
-        <div class="swatch-list" id="swatches" aria-label="Preview a colour"></div>
-        <p class="selected-colour">Previewing: <strong id="selectedColour">Choose a colour</strong></p>
-        <p class="selected-product" id="selectedProduct">Select a colour to view its product photo.</p>
-
-        <div class="product-facts">
-          <div><span>PRODUCT TYPE</span><strong id="factFabric">Cotton Khaddar Blend</strong></div>
-          <div><span>STITCHING</span><strong id="factStitching">Not included</strong></div>
-          <div><span>FABRIC LENGTH</span><strong id="factLength">4 Metres</strong></div>
+        <div class="selection-block">
+          <div class="selection-heading"><span>CHOOSE YOUR COLOUR</span><strong id="colourCount">5 colours</strong></div>
+          <div class="swatch-list" id="swatches" aria-label="Preview a colour"></div>
+          <p class="selected-colour">Selected shade: <strong id="selectedColour">Choose a colour</strong></p>
+          <p class="selected-product" id="selectedProduct">Select a colour to view its product photos.</p>
+          <p class="colour-variation-note">Please note: Actual fabric colours may vary slightly from the photographs due to lighting and screen settings.</p>
+          <p class="selection-help">Choose a colour to preview it, set quantity, then add it. You can combine different colours in one order.</p>
         </div>
 
-        <p class="product-description">A perfect blend of khaddar look with wash &amp; wear softness. Not rough, not heavy — just warm and comfortable for daily wear. Light, warm and made for everyday winter comfort.</p>
-
-        <div class="purchase-controls">
-          <span class="purchase-label">QUANTITY</span>
-          <div class="product-quantity" aria-label="Selected colour quantity">
-            <button type="button" id="productQtyMinus" aria-label="Decrease quantity">−</button>
-            <output id="productQty" aria-live="polite">1</output>
-            <button type="button" id="productQtyPlus" aria-label="Increase quantity">+</button>
-          </div>
+        <div class="quantity-block">
+          <div><span class="selection-heading">HOW MANY SUITS?</span><small>Choose quantity for this colour. Add another colour separately.</small></div>
+          <div class="product-quantity" aria-label="Selected colour quantity"><button type="button" id="productQtyMinus" aria-label="Decrease quantity">−</button><output id="productQty" aria-live="polite">1</output><button type="button" id="productQtyPlus" aria-label="Increase quantity">+</button></div>
         </div>
-        <button class="primary-button" id="addToCartButton" type="button">
-          <span>Add selected colour to cart</span><span aria-hidden="true">＋</span>
-        </button>
-        <p class="colour-variation-note">Please note: Actual fabric colours may vary slightly due to lighting and screen settings.</p>
+        <button class="primary-button" id="addToCartButton" type="button"><span>Add selected colour to bag</span><span aria-hidden="true">＋</span></button>
         <button class="buy-now-button" id="buyNowButton" type="button">Buy Now <span aria-hidden="true">→</span></button>
-        <p class="cart-inline-note">Choose a colour to preview it, set quantity, then add it. You can combine different colours in one order.</p>
-        <p class="small-note">This product is unstitched fabric. Stitching is not included.</p>
       </div>
     </section>
 
-    <section class="benefits-section" id="why-legend" aria-labelledby="benefitsHeading">
-      <div class="benefits-heading">
-        <p class="section-kicker">MADE FOR EVERYDAY WINTER COMFORT</p>
-        <h2 id="benefitsHeading">Why You’ll Love It.</h2>
-        <p>Thoughtful details that make choosing your winter fabric easier.</p>
-      </div>
-      <div class="benefit-grid">
-        <article class="benefit-card"><span class="benefit-index">01</span><span class="benefit-icon">✳</span><h3>Light &amp; Warm</h3><p>Comfortable to wear throughout the day without feeling too heavy.</p></article>
-        <article class="benefit-card"><span class="benefit-index">02</span><span class="benefit-icon">◌</span><h3>Khaddar Look, Soft Feel</h3><p>A khaddar-inspired look blended with wash &amp; wear softness.</p></article>
-        <article class="benefit-card"><span class="benefit-index">03</span><span class="benefit-icon">◇</span><h3>Colour Guaranteed</h3><p>Colour guarantee as stated for the Legend Winter Cotton fabric.</p></article>
-        <article class="benefit-card"><span class="benefit-index">04</span><span class="benefit-icon">↗</span><h3>No Shrinking After Wash</h3><p>Made to retain its size after washing, as specified for this fabric.</p></article>
+    <section class="fabric-intro" aria-labelledby="fabricIntroHeading">
+      <p class="section-kicker">MADE FOR EVERYDAY WINTER COMFORT</p>
+      <h2 id="fabricIntroHeading">A softer take on winter dressing.</h2>
+      <p>A khaddar-inspired look with wash &amp; wear softness. Light, warm and comfortable for everyday winter wear.</p>
+      <div class="fabric-specs"><div><span>FABRIC</span><strong id="factFabric">Cotton Khaddar Blend</strong></div><div><span>PER SUIT</span><strong id="factLength">4 Metres</strong></div><div><span>SEASON</span><strong>Winter</strong></div></div>
+    </section>
+
+    <section class="shade-help" aria-label="Colour note"><div><p class="section-kicker">CHOOSING YOUR SHADE</p><h2>Every screen shows colour a little differently.</h2><p>Use the real product photos above as your guide. Actual fabric shades may vary slightly with lighting and screen settings.</p></div><span class="shade-mark" aria-hidden="true">D—L</span></section>
+
+    <section class="details-section" aria-labelledby="detailsHeading">
+      <div class="details-heading"><p class="section-kicker">THE DETAILS</p><h2 id="detailsHeading">Know your fabric.</h2></div>
+      <div class="detail-accordions">
+        <details open><summary>The fabric <span>Hand feel, weight &amp; finish</span></summary><p>Legend Winter Cotton is a Cotton Khaddar Blend with a khaddar-inspired look and wash &amp; wear softness. It is described as light and warm for everyday winter comfort.</p></details>
+        <details><summary>What’s included <span>4 metre cutting</span></summary><p>Each suit purchase includes 4 metres of unstitched fabric. Stitching is not included.</p></details>
+        <details><summary>Care &amp; wash <span>Product information</span></summary><p>The fabric information supplied for this product states colour guarantee and no shrinking after wash. Follow the care guidance provided with your fabric.</p></details>
+        <details><summary>Delivery &amp; order total <span>Clear pricing</span></summary><p>Delivery is Rs. 200 for a one-suit order. Delivery is free when the total quantity in your cart is 2 suits or more, including different colours.</p></details>
       </div>
     </section>
 
-    <section class="included-section" aria-labelledby="includedHeading">
-      <div class="included-copy">
-        <p class="section-kicker">WHAT’S INCLUDED</p>
-        <h2 id="includedHeading">One 4-Metre Fabric Cutting.</h2>
-        <p>Your purchase is for unstitched Legend Winter Cotton fabric. You can have it stitched according to your own preferred style.</p>
-      </div>
-      <div class="included-detail">
-        <div class="included-measure"><strong>4</strong><span>METRES</span></div>
-        <div class="included-notes"><p><span>✓</span> 4 metres of unstitched fabric</p><p><span>✓</span> Your selected colour</p><p><span>—</span> Stitching is not included</p></div>
-      </div>
-    </section>
-
-    <section class="editorial-section fabric-section" id="fabric-details" aria-labelledby="fabricHeading">
-      <div class="section-kicker">THE FABRIC, UP CLOSE</div>
-      <div class="section-heading-row">
-        <div>
-          <h2 id="fabricHeading">Soft Warmth, Refined for Winter.</h2>
-          <p class="section-intro">Discover the texture, finish and colour options of Legend Winter Cotton.</p>
-        </div>
-        <span class="section-index" aria-hidden="true">01</span>
-      </div>
-      <div class="fabric-detail-grid">
-        <div class="detail-photo detail-photo-main" id="detailPhotoMain">
-          <div class="photo-placeholder"><span>LEGEND WINTER COTTON</span><small>Product close-up photo to be added</small></div>
-        </div>
-        <div class="detail-copy">
-          <span class="detail-label">PRODUCT DETAILS</span>
-          <h3>Comfort you can choose with confidence.</h3>
-          <p>A khaddar-inspired look meets wash &amp; wear softness. The fabric is designed to feel light and warm without feeling rough or heavy.</p>
-          <ul class="detail-list">
-            <li><span class="detail-dot"></span><span>Fabric type: <strong id="detailFabricType">Cotton Khaddar Blend</strong></span></li>
-            <li><span class="detail-dot"></span><span>Fabric length: <strong id="detailFabricLength">4 Metres</strong></span></li>
-            <li><span class="detail-dot"></span><span>Stitching: <strong>Not included</strong></span></li>
-          </ul>
-          <a class="text-link" href="#specifications">View product specifications <span aria-hidden="true">↘</span></a>
-        </div>
-        <div class="detail-photo detail-photo-secondary" id="detailPhotoSecondary">
-          <div class="photo-placeholder"><span>TEXTURE &amp; FINISH</span><small>Additional real product photo to be added</small></div>
-        </div>
-      </div>
-      <p class="image-disclaimer">Actual product photographs are shown for the selected colour.</p>
-    </section>
-
-    <section class="style-section" id="styling" aria-labelledby="styleHeading">
-      <div class="style-panel">
-        <div class="style-panel-mark" aria-hidden="true">D<span>—</span>L</div>
-        <p class="section-kicker">YOUR STYLE, YOUR CHOICE</p>
-        <h2 id="styleHeading">A Look That Feels Like You.</h2>
-        <p>Choose your preferred colour and plan your own look. Legend Winter Cotton is sold as unstitched fabric; stitching is not included.</p>
-        <a class="outline-button" href="#product">Explore the colours <span aria-hidden="true">↑</span></a>
-      </div>
-      <div class="style-photo-pair" aria-label="Selected colour product photographs">
-        <div class="style-photo" id="stylePhotoFront"><span>FRONT VIEW</span></div>
-        <div class="style-photo style-photo-back" id="stylePhotoBack"><span>BACK VIEW</span></div>
-      </div>
-    </section>
-
-    <section class="specifications-section" id="specifications" aria-labelledby="specHeading">
-      <div class="section-kicker">CLEAR BEFORE YOU CHOOSE</div>
-      <div class="section-heading-row">
-        <div>
-          <h2 id="specHeading">Know What You’re Ordering.</h2>
-          <p class="section-intro">The essentials, presented clearly so you can make an informed decision.</p>
-        </div>
-        <span class="section-index" aria-hidden="true">02</span>
-      </div>
-      <div class="specification-table">
-        <div class="spec-row"><span>Collection</span><strong>Legend Winter Cotton</strong></div>
-        <div class="spec-row"><span>Product type</span><strong id="specFabric">Unstitched fabric</strong></div>
-        <div class="spec-row"><span>Fabric length</span><strong id="specLength">4 Metres</strong></div>
-        <div class="spec-row"><span>Stitching</span><strong>Not included</strong></div>
-        <div class="spec-row"><span>Price</span><strong id="specPrice">Rs. 3,499</strong></div>
-        <div class="spec-row"><span>Best season</span><strong>October to March</strong></div>
-        <div class="spec-row"><span>Colour &amp; wash</span><strong>Colour guaranteed · No shrinking after wash</strong></div>
-        <div class="spec-row"><span>Selected colour</span><strong id="specColour">Choose a colour above</strong></div>
-      </div>
-      <p class="specification-note">Sold as 4 metre unstitched fabric. Stitching is not included.</p>
-    </section>
-
-    <section class="ordering-section" id="ordering-info" aria-labelledby="orderingHeading">
-      <div class="ordering-copy">
-        <p class="section-kicker">SHOP WITH CLARITY</p>
-        <h2 id="orderingHeading">Everything Clear Before Checkout.</h2>
-        <p>Before ordering, review the confirmed delivery charges, payment methods and return or exchange conditions. These details will be added when the store policies are finalized.</p>
-      </div>
-      <div class="policy-grid">
-        <article class="policy-card">
-          <span class="policy-number">01</span>
-          <h3>Delivery</h3>
-          <p>Delivery is <strong>Rs. 200</strong> for one suit. Order 2 or more suits, including mixed colours, and delivery is <strong>FREE</strong>.</p>
-        </article>
-        <article class="policy-card">
-          <span class="policy-number">02</span>
-          <h3>Payment</h3>
-          <p>Available payment methods: <strong>to be confirmed</strong>.</p>
-        </article>
-        <article class="policy-card">
-          <span class="policy-number">03</span>
-          <h3>Returns &amp; exchanges</h3>
-          <p>Eligibility and policy conditions: <strong>to be confirmed</strong>.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="trust-section" aria-labelledby="trustHeading">
-      <div class="trust-symbol" aria-hidden="true">✳</div>
-      <div class="trust-copy">
-        <p class="section-kicker">OUR STANDARD</p>
-        <h2 id="trustHeading">Honest Details. Confident Choices.</h2>
-        <p>We’ll use real product photography and verified product information to help you understand what you’re choosing. Customer reviews and brand claims will only be added when genuine supporting proof is available.</p>
-      </div>
-    </section>
-
-    <section class="faq-section" id="faqs" aria-labelledby="faqHeading">
-      <div class="faq-intro-block">
-        <p class="section-kicker">NEED A LITTLE CLARITY?</p>
-        <h2 id="faqHeading">Frequently Asked Questions</h2>
-        <p>Useful details about the product and what to confirm before ordering.</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Is Legend Winter Cotton a stitched suit?</summary>
-          <p>No. It is sold as 4 metre unstitched fabric. Stitching is not included.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How do I choose a colour?</summary>
-          <p>Select a colour to preview its product photos. It is added to your cart only when you press “Add selected colour to cart” or “Buy Now”.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What is the fabric length?</summary>
-          <p>Each cutting is 4 metres, intended as a full suit cutting for all sizes.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What is the price?</summary>
-          <p>Each suit cutting is priced at Rs. 3,499. Delivery is Rs. 200 for one suit and free on orders of 2 or more suits.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Which season is this fabric suitable for?</summary>
-          <p>Legend Winter Cotton is best suited for October to March.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What are the delivery and return policies?</summary>
-          <p>Delivery, payment and return or exchange information will be published once the store policies are confirmed.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="final-cta" aria-labelledby="finalCtaHeading">
-      <p class="section-kicker">DIYAR-E-LIBAS · LEGEND WINTER COTTON</p>
-      <h2 id="finalCtaHeading">Start With Your Preferred Colour.</h2>
-      <p>Explore the collection and review the product details before you decide.</p>
-      <a class="final-cta-button" href="#product">Choose Your Colour <span aria-hidden="true">↑</span></a>
-    </section>
+    <section class="closing-panel"><p class="section-kicker">DIYAR-E-LIBAS · LEGEND WINTER COTTON</p><h2>Choose your colour. Make it yours.</h2><p>Explore the real product photographs and select the shade and quantity that suit you.</p><a href="#product">Back to the collection ↑</a></section>
   </main>
 
   <div class="cart-backdrop" id="cartBackdrop" hidden></div>
   <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
-    <div class="cart-drawer-header">
-      <div><p class="section-kicker">YOUR SELECTION</p><h2>Your Cart</h2></div>
-      <button class="icon-button" id="closeCartButton" type="button" aria-label="Close cart">×</button>
-    </div>
-    <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty. Choose a colour to get started.</p></div>
-    <div class="cart-summary" id="cartSummary">
-      <div><span>Total suits</span><strong id="cartTotalQuantity">0</strong></div>
-      <div><span>Subtotal</span><strong id="cartSubtotal">Rs. 0</strong></div>
-      <div><span>Delivery</span><strong id="cartDelivery">Rs. 200</strong></div>
-      <p class="free-delivery-hint" id="freeDeliveryHint">Add 1 more suit to get free delivery.</p>
-      <div class="cart-grand-total"><span>Total</span><strong id="cartGrandTotal">Rs. 200</strong></div>
-      <button class="checkout-button" id="checkoutButton" type="button" disabled>Proceed to checkout <span>→</span></button>
-    </div>
+    <div class="cart-drawer-header"><div><p class="section-kicker">YOUR SELECTION</p><h2>Your Bag</h2></div><button class="icon-button" id="closeCartButton" type="button" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Your bag is empty. Choose a colour to get started.</p></div>
+    <div class="cart-summary"><div><span>Total suits</span><strong id="cartTotalQuantity">0</strong></div><div><span>Subtotal</span><strong id="cartSubtotal">Rs. 0</strong></div><div><span>Delivery</span><strong id="cartDelivery">Rs. 200</strong></div><p class="free-delivery-hint" id="freeDeliveryHint">Add 2 suits to get free delivery.</p><div class="cart-grand-total"><span>Total</span><strong id="cartGrandTotal">Rs. 200</strong></div><button class="checkout-button" id="checkoutButton" type="button" disabled>Continue to checkout <span>→</span></button></div>
   </aside>
 
-  <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
-    <div class="checkout-backdrop" id="checkoutBackdrop"></div>
-    <section class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutHeading">
-      <div class="checkout-heading"><div><p class="section-kicker">ALMOST YOURS</p><h2 id="checkoutHeading">Delivery Details</h2></div><button class="icon-button" id="closeCheckoutButton" type="button" aria-label="Close checkout">×</button></div>
-      <div class="checkout-order-preview" id="checkoutOrderPreview"></div>
-      <form id="checkoutForm">
-        <label>Full Name<input name="fullName" autocomplete="name" required maxlength="100" placeholder="Your full name"></label>
-        <label>Phone Number<input name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="03XXXXXXXXX"></label>
-        <label>City<input name="city" autocomplete="address-level2" required maxlength="80" placeholder="Your city"></label>
-        <label>Complete Address<textarea name="address" autocomplete="street-address" required rows="3" maxlength="500" placeholder="House number, street, area"></textarea></label>
-        <div class="checkout-total-row"><span>Order total</span><strong id="checkoutGrandTotal">Rs. 0</strong></div>
-        <button class="checkout-button" id="placeOrderButton" type="submit">Place order <span>→</span></button>
-        <p class="checkout-message" id="checkoutMessage" role="status"></p>
-      </form>
-    </section>
-  </div>
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true"><div class="checkout-backdrop" id="checkoutBackdrop"></div><section class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutHeading"><div class="checkout-heading"><div><p class="section-kicker">ALMOST YOURS</p><h2 id="checkoutHeading">Delivery details</h2></div><button class="icon-button" id="closeCheckoutButton" type="button" aria-label="Close checkout">×</button></div><div class="checkout-order-preview" id="checkoutOrderPreview"></div><form id="checkoutForm"><label>Full Name<input name="fullName" autocomplete="name" required maxlength="100" placeholder="Your full name"></label><label>Phone Number<input name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="03XXXXXXXXX"></label><label>City<input name="city" autocomplete="address-level2" required maxlength="80" placeholder="Your city"></label><label>Complete Address<textarea name="address" autocomplete="street-address" required rows="3" maxlength="500" placeholder="House number, street, area"></textarea></label><div class="checkout-total-row"><span>Order total</span><strong id="checkoutGrandTotal">Rs. 0</strong></div><button class="checkout-button" id="placeOrderButton" type="submit">Place order <span>→</span></button><p class="checkout-message" id="checkoutMessage" role="status"></p></form></section></div>
 
-  <div class="mobile-sticky-cta" role="region" aria-label="Quick purchase">
-    <button class="sticky-view-cart" id="mobileCartButton" type="button"><span class="sticky-cta-copy"><small>YOUR CART</small><strong><span id="mobileCartCount">0</span> suits · <span id="stickyCartTotal">Rs. 0</span></strong></span><span class="sticky-cta-button">View Cart</span></button>
-    <button class="sticky-buy-now" id="stickyBuyNowButton" type="button">Buy Now <span>→</span></button>
-  </div>
+  <div class="mobile-sticky-cta" role="region" aria-label="Quick purchase"><button class="sticky-view-cart" id="mobileCartButton" type="button"><span class="sticky-cta-copy"><small>YOUR BAG</small><strong><span id="mobileCartCount">0</span> suits · <span id="stickyCartTotal">Rs. 200</span></strong></span><span class="sticky-cta-button">View bag</span></button><button class="sticky-buy-now" id="stickyBuyNowButton" type="button">Buy Now <span>→</span></button></div>
 
-  <footer class="site-footer">
-    <a class="wordmark" href="../">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a>
-    <a href="../">Back to home ↑</a>
-    <span>© <span class="year"></span> DIYAR-E-LIBAS</span>
-  </footer>
-
+  <footer class="site-footer"><a class="wordmark" href="../">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a><a href="../">Back to home ↑</a><span>© <span class="year"></span> DIYAR-E-LIBAS</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
