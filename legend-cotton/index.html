@@ -52,8 +52,9 @@
           <span>SELECT YOUR COLOUR</span>
           <span id="colourCount">6 options</span>
         </div>
-        <div class="swatch-list" id="swatches" aria-label="Choose a colour"></div>
-        <p class="selected-colour">Selected: <strong id="selectedColour">Choose a colour</strong></p>
+        <div class="swatch-list" id="swatches" aria-label="Preview a colour"></div>
+        <p class="colour-help">Tap a colour to preview its real product photos. Previewing does not add it to your cart.</p>
+        <p class="selected-colour">Previewing: <strong id="selectedColour">Choose a colour</strong></p>
         <p class="selected-product" id="selectedProduct">Select a colour to view its product photo.</p>
 
         <div class="product-facts">
@@ -64,10 +65,19 @@
 
         <p class="product-description">A perfect blend of khaddar look with wash &amp; wear softness. Not rough, not heavy — just warm and comfortable for daily wear. Light, warm and made for everyday winter comfort.</p>
 
+        <div class="purchase-controls">
+          <span class="purchase-label">QUANTITY</span>
+          <div class="product-quantity" aria-label="Selected colour quantity">
+            <button type="button" id="productQtyMinus" aria-label="Decrease quantity">−</button>
+            <output id="productQty" aria-live="polite">1</output>
+            <button type="button" id="productQtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
         <button class="primary-button" id="addToCartButton" type="button">
-          <span>Add selected colour to cart</span><span aria-hidden="true">+</span>
+          <span>Add selected colour to cart</span><span aria-hidden="true">＋</span>
         </button>
-        <p class="cart-inline-note">You can add more colours to the same order.</p>
+        <button class="buy-now-button" id="buyNowButton" type="button">Buy Now <span aria-hidden="true">→</span></button>
+        <p class="cart-inline-note">Choose a colour to preview it, set quantity, then add it. You can combine different colours in one order.</p>
         <p class="small-note">This product is unstitched fabric. Stitching is not included.</p>
       </div>
     </section>
@@ -175,7 +185,7 @@
         <article class="policy-card">
           <span class="policy-number">01</span>
           <h3>Delivery</h3>
-          <p>Delivery charges and estimated delivery time: <strong>to be confirmed</strong>.</p>
+          <p>Delivery is <strong>Rs. 200</strong> for one suit. Order 2 or more suits, including mixed colours, and delivery is <strong>FREE</strong>.</p>
         </article>
         <article class="policy-card">
           <span class="policy-number">02</span>
@@ -212,7 +222,7 @@
         </details>
         <details class="faq-item">
           <summary>How do I choose a colour?</summary>
-          <p>Select one of the colour options in the product section to see its associated product image and selected colour name.</p>
+          <p>Select a colour to preview its product photos. It is added to your cart only when you press “Add selected colour to cart” or “Buy Now”.</p>
         </details>
         <details class="faq-item">
           <summary>What is the fabric length?</summary>
@@ -220,7 +230,7 @@
         </details>
         <details class="faq-item">
           <summary>What is the price?</summary>
-          <p>Legend Winter Cotton is priced at Rs. 3,499.</p>
+          <p>Each suit cutting is priced at Rs. 3,499. Delivery is Rs. 200 for one suit and free on orders of 2 or more suits.</p>
         </details>
         <details class="faq-item">
           <summary>Which season is this fabric suitable for?</summary>
@@ -275,7 +285,10 @@
     </section>
   </div>
 
-  <div class="mobile-sticky-cta"><button id="mobileCartButton" type="button"><span class="sticky-cta-copy"><small>LEGEND WINTER COTTON</small><strong>Rs. 3,499</strong></span><span class="sticky-cta-button">View Cart <b id="mobileCartCount">0</b></span></button></div>
+  <div class="mobile-sticky-cta" role="region" aria-label="Quick purchase">
+    <button class="sticky-view-cart" id="mobileCartButton" type="button"><span class="sticky-cta-copy"><small>YOUR CART</small><strong><span id="mobileCartCount">0</span> suits · <span id="stickyCartTotal">Rs. 0</span></strong></span><span class="sticky-cta-button">View Cart</span></button>
+    <button class="sticky-buy-now" id="stickyBuyNowButton" type="button">Buy Now <span>→</span></button>
+  </div>
 
   <footer class="site-footer">
     <a class="wordmark" href="../">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a>
@@ -286,5 +299,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-  
