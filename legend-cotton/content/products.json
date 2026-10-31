@@ -1,6 +1,7 @@
 {
   "name": "Legend Winter Cotton",
-  "price": "Rs. 3,500",
+  "price": "Rs. 3,499",
+  "priceValue": 3499,
   "fabricType": "Cotton Khaddar Blend",
   "stitchingIncluded": false,
   "length": "4 Metres",
@@ -61,11 +62,11 @@
     }
   ],
   "season": "October to March",
-  "description": "A perfect blend of khaddar look with wash & wear softness. Not rough, not heavy — just warm and comfortable for daily winter wear.",
+  "description": "A perfect blend of khaddar look with wash & wear softness. Not rough, not heavy \u2014 just warm and comfortable for daily winter wear.",
   "benefits": [
     "Light & warm, comfortable all day long",
     "Colour guaranteed",
     "No shrinking after wash",
-    "4 metre cutting — full suit for all sizes"
+    "4 metre cutting \u2014 full suit for all sizes"
   ]
 }
