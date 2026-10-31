@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const swatches=$('#swatches'), mainImage=$('#mainImage'), thumbnails=$('#galleryThumbnails'), selectedName=$('#selectedColour'), selectedProduct=$('#selectedProduct'), counter=$('.image-counter');
   const colors=product.colors||[]; let activeColorIndex=0, activeImageIndex=0;
   const PRICE=Number(product.priceValue)||3499, DELIVERY=200, STORAGE_KEY='diyarLegendCottonCartV1';
+  let selectedQuantity=1;
   const setText=(selector,value)=>{const node=$(selector);if(node)node.textContent=value;};
   const money=(amount)=>`Rs. ${Number(amount).toLocaleString('en-PK')}`;
   setText('#productTitle',product.name||'Legend Winter Cotton'); setText('#colourCount',`${colors.length} colours`); setText('#productPrice',money(PRICE));
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setText('#cartDelivery', delivery() === 0 ? 'FREE' : money(DELIVERY));
     setText('#cartGrandTotal', money(grand()));
     setText('#checkoutGrandTotal', money(grand()));
+    setText('#stickyCartTotal', money(grand()));
 
     const hint = $('#freeDeliveryHint');
     if (hint) hint.textContent = count >= 2 ? 'You qualify for free delivery.' : count === 1 ? 'Add 1 more suit to get free delivery.' : 'Add 2 suits to get free delivery.';
@@ -82,7 +84,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         price.className = 'cart-item-price';
         price.textContent = money(item.quantity * PRICE);
         const remove = document.createElement('button');
-        remove.type = 'button'; remove.className = 'cart-remove'; remove.textContent = 'Remove';
+        remove.type = 'button'; remove.className = 'cart-remove'; remove.textContent = '×';
+        remove.setAttribute('aria-label', `Remove ${color.name} from cart`);
+        remove.title = 'Remove this colour';
         remove.addEventListener('click', () => {
           cart = cart.filter((x) => x.colorId !== item.colorId);
           saveCart(); renderCart();
@@ -96,11 +100,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (checkout) checkout.disabled = count === 0;
   }
   function changeQty(colorId,delta){const item=cart.find(x=>x.colorId===colorId);if(!item)return;item.quantity+=delta;if(item.quantity<=0)cart=cart.filter(x=>x.colorId!==colorId);saveCart();renderCart();}
-  function addSelected(){const color=colors[activeColorIndex];if(!color){alert('Please select a colour first.');return;}const item=cart.find(x=>x.colorId===color.id);if(item)item.quantity+=1;else cart.push({colorId:color.id,quantity:1});saveCart();renderCart();openCart();}
+  function addSelected(openDrawer=true){const color=colors[activeColorIndex];if(!color){alert('Please select a colour first.');return;}const qty=Math.max(1,Math.min(20,selectedQuantity));const item=cart.find(x=>x.colorId===color.id);if(item)item.quantity+=qty;else cart.push({colorId:color.id,quantity:qty});saveCart();renderCart();if(openDrawer)openCart();}
+  function buySelectedNow(){addSelected(false);openCheckout();}
+  function setProductQty(next){selectedQuantity=Math.max(1,Math.min(20,next));setText('#productQty',selectedQuantity);}
   const drawer=$('#cartDrawer'),cartBackdrop=$('#cartBackdrop');function openCart(){if(!drawer)return;drawer.classList.add('is-open');drawer.setAttribute('aria-hidden','false');if(cartBackdrop)cartBackdrop.hidden=false;document.body.classList.add('cart-open');}function closeCart(){if(!drawer)return;drawer.classList.remove('is-open');drawer.setAttribute('aria-hidden','true');if(cartBackdrop)cartBackdrop.hidden=true;document.body.classList.remove('cart-open');}
   const modal=$('#checkoutModal');function openCheckout(){if(!cart.length)return;closeCart();const preview=$('#checkoutOrderPreview');if(preview){preview.textContent=cart.map(item=>{const c=colors.find(x=>x.id===item.colorId);return `${c?.name||item.colorId} × ${item.quantity}`;}).join('  ·  ')+` | ${money(subtotal())} subtotal | Delivery: ${delivery()===0?'FREE':money(DELIVERY)}`;}if(modal){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');}}
   function closeCheckout(){if(modal){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');}}
-  $('#addToCartButton')?.addEventListener('click',addSelected);$('#openCartButton')?.addEventListener('click',openCart);$('#mobileCartButton')?.addEventListener('click',openCart);$('#closeCartButton')?.addEventListener('click',closeCart);cartBackdrop?.addEventListener('click',closeCart);$('#checkoutButton')?.addEventListener('click',openCheckout);$('#closeCheckoutButton')?.addEventListener('click',closeCheckout);$('#checkoutBackdrop')?.addEventListener('click',closeCheckout);
+  $('#addToCartButton')?.addEventListener('click',()=>addSelected(true));$('#buyNowButton')?.addEventListener('click',buySelectedNow);$('#stickyBuyNowButton')?.addEventListener('click',buySelectedNow);$('#productQtyMinus')?.addEventListener('click',()=>setProductQty(selectedQuantity-1));$('#productQtyPlus')?.addEventListener('click',()=>setProductQty(selectedQuantity+1));$('#openCartButton')?.addEventListener('click',openCart);$('#mobileCartButton')?.addEventListener('click',openCart);$('#closeCartButton')?.addEventListener('click',closeCart);cartBackdrop?.addEventListener('click',closeCart);$('#checkoutButton')?.addEventListener('click',openCheckout);$('#closeCheckoutButton')?.addEventListener('click',closeCheckout);$('#checkoutBackdrop')?.addEventListener('click',closeCheckout);
   $('#checkoutForm')?.addEventListener('submit',(event)=>{event.preventDefault();const form=event.currentTarget;const message=$('#checkoutMessage');if(!cart.length)return;const data=new FormData(form);const order={customer:{fullName:String(data.get('fullName')||'').trim(),phone:String(data.get('phone')||'').trim(),city:String(data.get('city')||'').trim(),address:String(data.get('address')||'').trim()},items:cart.map(item=>{const c=colors.find(x=>x.id===item.colorId);return {product:product.name,colour:c?.name||item.colorId,colourId:item.colorId,quantity:item.quantity,unitPrice:PRICE,lineTotal:item.quantity*PRICE};}),totalQuantity:totalQty(),subtotal:subtotal(),delivery:delivery(),grandTotal:grand(),currency:'PKR'};
     // Google Sheets endpoint is intentionally not guessed. Connect the deployed Apps Script URL here.
     const endpoint=window.DIYAR_ORDERS_ENDPOINT||'';
