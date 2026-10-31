@@ -1284,3 +1284,96 @@ body.legend-cotton-page { padding-bottom: 112px; }
   font-size: 11px;
   line-height: 1.65;
 }
+
+/* MOBILE FIRST-SCREEN PRODUCT PICKER — layout only, desktop unchanged */
+@media (max-width: 520px) {
+  .legend-cotton-page #product.product-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 12px 4% 34px;
+    align-items: start;
+  }
+
+  /* Flatten the two desktop columns so the gallery and colour picker can
+     appear together before the longer product information on mobile. */
+  .legend-cotton-page #product .gallery-column,
+  .legend-cotton-page #product .product-info {
+    display: contents;
+  }
+
+  .legend-cotton-page #product .main-image { order: 1; aspect-ratio: 1 / 1.04; width: 100%; }
+  .legend-cotton-page #product .gallery-thumbnails { order: 2; margin-top: 8px; gap: 6px; }
+  .legend-cotton-page #product .gallery-thumb img { aspect-ratio: 1 / 1.08; }
+  .legend-cotton-page #product .gallery-thumb span { font-size: 8px; padding: 4px 2px 0; }
+
+  .legend-cotton-page #product .field-heading { order: 3; margin-top: 18px; }
+  .legend-cotton-page #product .swatch-list {
+    order: 4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: clamp(17px, 6vw, 28px);
+    margin: 12px 0 7px;
+    padding: 3px 2px 5px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .legend-cotton-page #product .swatch-list::-webkit-scrollbar { display: none; }
+  .legend-cotton-page #product .swatch {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    min-width: 48px;
+    padding: 2px 0 4px;
+    border: 0 !important;
+    border-radius: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #26364A;
+    font-size: 10px;
+    font-weight: 600;
+    transform: none !important;
+  }
+  .legend-cotton-page #product .swatch .swatch-colour {
+    width: 39px;
+    max-width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+    margin: 0;
+    border: 1px solid rgba(38,54,74,.24);
+    outline: 0;
+    box-shadow: 0 2px 5px rgba(24,35,49,.12);
+    border-radius: 50%;
+  }
+  .legend-cotton-page #product .swatch[aria-pressed="true"] {
+    border: 0 !important;
+    background: transparent !important;
+    font-weight: 800;
+  }
+  .legend-cotton-page #product .swatch[aria-pressed="true"] .swatch-colour {
+    outline: 2px solid #26364A;
+    outline-offset: 3px;
+    box-shadow: 0 3px 9px rgba(24,35,49,.2);
+  }
+  .legend-cotton-page #product .selected-colour { order: 5; margin: 5px 0 3px; font-size: 12px; }
+  .legend-cotton-page #product .selected-product { order: 6; font-size: 10px; min-height: 0; }
+
+  .legend-cotton-page #product .eyebrow { order: 7; margin-top: 24px; }
+  .legend-cotton-page #product h1 { order: 8; margin-top: 5px; font-size: clamp(34px, 9vw, 40px); }
+  .legend-cotton-page #product .subtitle { order: 9; margin: 0; }
+  .legend-cotton-page #product .price-line { order: 10; margin: 16px 0; }
+  .legend-cotton-page #product .rule { order: 11; margin: 8px 0 18px; }
+  .legend-cotton-page #product .product-facts { order: 12; }
+  .legend-cotton-page #product .product-description { order: 13; }
+  .legend-cotton-page #product .purchase-controls { order: 14; }
+  .legend-cotton-page #product #addToCartButton { order: 15; }
+  .legend-cotton-page #product .colour-variation-note { order: 16; }
+  .legend-cotton-page #product #buyNowButton { order: 17; }
+  .legend-cotton-page #product .cart-inline-note { order: 18; }
+  .legend-cotton-page #product .small-note { order: 19; }
+  .legend-cotton-page #product .gallery-caption { order: 20; margin: 10px 0 0; }
+}
