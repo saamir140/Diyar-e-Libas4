@@ -1336,3 +1336,27 @@ body.legend-cotton-page { padding-bottom:92px; }
     border-radius: 50% !important;
   }
 }
+
+/* CLEAN BUYING AREA: remove duplicate shade and unnecessary instructions */
+.legend-cotton-page .selected-colour,
+.legend-cotton-page .selection-help {
+  display: none !important;
+}
+
+/* Keep the quantity control; remove its redundant heading and helper copy. */
+.legend-cotton-page .quantity-block > div:first-child {
+  display: none !important;
+}
+
+.legend-cotton-page .quantity-block {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  border-top: 1px solid #d6dce1 !important;
+  margin-top: 12px !important;
+  padding: 12px 0 8px !important;
+}
+
+.legend-cotton-page .quantity-block .product-quantity {
+  margin-left: auto !important;
+}
