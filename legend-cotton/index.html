@@ -50,7 +50,7 @@
 <div><span class="selection-heading">HOW MANY SUITS?</span><small>Choose quantity for this colour. Add another colour separately.</small></div>
 <div aria-label="Selected colour quantity" class="product-quantity"><button aria-label="Decrease quantity" id="productQtyMinus" type="button">−</button><output aria-live="polite" id="productQty">1</output><button aria-label="Increase quantity" id="productQtyPlus" type="button">+</button></div>
 </div>
-<button class="primary-button" id="addToCartButton" type="button"><span>Add selected colour to bag</span><span aria-hidden="true">＋</span></button>
+<button class="primary-button" id="addToCartButton" type="button"><span>Add to cart</span><span aria-hidden="true">＋</span></button>
 <button class="buy-now-button" id="buyNowButton" type="button">Buy Now <span aria-hidden="true">→</span></button>
 <p class="colour-variation-note">Please note: Actual fabric colours may vary slightly from the photographs due to lighting and screen settings.</p>
 </div>
@@ -220,9 +220,22 @@
 <div class="cart-summary"><div><span>Total suits</span><strong id="cartTotalQuantity">0</strong></div><div><span>Subtotal</span><strong id="cartSubtotal">Rs. 0</strong></div><div><span>Delivery</span><strong id="cartDelivery">Rs. 200</strong></div><p class="free-delivery-hint" id="freeDeliveryHint">Add 2 suits to get free delivery.</p><div class="cart-grand-total"><span>Total</span><strong id="cartGrandTotal">Rs. 200</strong></div><button class="checkout-button" disabled="" id="checkoutButton" type="button">Continue to checkout <span>→</span></button></div>
 </aside>
 <div aria-hidden="true" class="checkout-modal" id="checkoutModal"><div class="checkout-backdrop" id="checkoutBackdrop"></div><section aria-labelledby="checkoutHeading" aria-modal="true" class="checkout-panel" role="dialog"><div class="checkout-heading"><div><p class="section-kicker">ALMOST YOURS</p><h2 id="checkoutHeading">Delivery details</h2></div><button aria-label="Close checkout" class="icon-button" id="closeCheckoutButton" type="button">×</button></div><div class="checkout-order-preview" id="checkoutOrderPreview"></div><form id="checkoutForm"><label>Full Name<input autocomplete="name" maxlength="100" name="fullName" placeholder="Your full name" required=""/></label><label>Phone Number<input autocomplete="tel" maxlength="20" name="phone" placeholder="03XXXXXXXXX" required="" type="tel"/></label><label>City<input autocomplete="address-level2" maxlength="80" name="city" placeholder="Your city" required=""/></label><label>Complete Address<textarea autocomplete="street-address" maxlength="500" name="address" placeholder="House number, street, area" required="" rows="3"></textarea></label><div class="checkout-total-row"><span>Order total</span><strong id="checkoutGrandTotal">Rs. 0</strong></div><button class="checkout-button" id="placeOrderButton" type="submit">Place order <span>→</span></button><p class="checkout-message" id="checkoutMessage" role="status"></p></form></section></div>
-<a class="whatsapp-help" href="https://wa.me/923183621505?text=Assalam-o-Alaikum%2C%20I%20need%20help%20with%20Legend%20Winter%20Cotton." target="_blank" rel="noopener" aria-label="Message DIYAR-E-LIBAS on WhatsApp"><span class="whatsapp-help-icon" aria-hidden="true">W</span><span>Need help? <strong>WhatsApp us</strong></span></a>
+<a class="whatsapp-help" href="https://wa.me/923183621505?text=Assalam-o-Alaikum%2C%20I%20need%20help%20with%20Legend%20Winter%20Cotton." target="_blank" rel="noopener" aria-label="Message DIYAR-E-LIBAS on WhatsApp"><span class="whatsapp-help-icon" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M16.02 3.2A12.55 12.55 0 0 0 5.25 22.2L3.6 28.2l6.16-1.61A12.56 12.56 0 1 0 16.02 3.2Zm0 22.9c-1.9 0-3.75-.51-5.36-1.49l-.38-.23-3.66.96.98-3.56-.25-.39a10.34 10.34 0 1 1 8.67 4.71Zm5.67-7.74c-.31-.16-1.83-.9-2.11-1-.28-.1-.49-.16-.69.16-.21.31-.8 1-.98 1.2-.18.21-.36.23-.67.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.14-.64.14-.14.31-.36.46-.54.15-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.69-1.67-.95-2.29-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.54.08-.82.39-.28.31-1.08 1.05-1.08 2.57s1.1 2.98 1.26 3.19c.15.21 2.17 3.31 5.26 4.64.74.32 1.31.51 1.76.65.74.24 1.41.21 1.94.13.59-.09 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.21-.59-.36Z"/></svg></span></a>
 <div aria-label="Quick purchase" class="mobile-sticky-cta" role="region"><button class="sticky-view-cart" id="mobileCartButton" type="button"><span class="sticky-cta-copy"><small>YOUR BAG</small><strong><span id="mobileCartCount">0</span> suits · <span id="stickyCartTotal">Rs. 200</span></strong></span><span class="sticky-cta-button">View bag</span></button><button class="sticky-buy-now" id="stickyBuyNowButton" type="button">Buy Now <span>→</span></button></div>
 <footer class="site-footer"><a class="wordmark" href="../">DIYAR-E-LIBAS<span>PREMIUM MENSWEAR</span></a><a href="../">Back to home ↑</a><span>© <span class="year"></span> DIYAR-E-LIBAS</span></footer>
 <script src="script.js"></script>
+<script>
+(function () {
+  var stickyBar = document.querySelector(".mobile-sticky-cta");
+  if (!stickyBar) return;
+  function updateStickyBar() {
+    var show = window.scrollY > 220;
+    stickyBar.classList.toggle("is-visible", show);
+    document.body.classList.toggle("sticky-cta-visible", show);
+  }
+  window.addEventListener("scroll", updateStickyBar, { passive: true });
+  updateStickyBar();
+})();
+</script>
 </body>
 </html>
