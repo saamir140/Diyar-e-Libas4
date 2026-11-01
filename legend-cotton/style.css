@@ -1430,33 +1430,213 @@ body.legend-cotton-page { padding-bottom:92px; }
 }
 
 
-/* NOV 01 — centre the mobile sticky Buy Now button */
+/* NOV 01 — compact product heading and price */
 @media (max-width: 680px) {
-  .legend-cotton-page .mobile-sticky-cta {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    transform: none !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    box-sizing: border-box !important;
+  .legend-cotton-page .product-info h1 {
+    font-size: clamp(35px, 9.2vw, 43px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.04em !important;
+  }
+  .legend-cotton-page .price {
+    font-size: 22px !important;
+    line-height: 1.1 !important;
+  }
+}
+@media (min-width: 681px) {
+  .legend-cotton-page .product-info h1 {
+    font-size: clamp(38px, 4.2vw, 54px) !important;
+  }
+  .legend-cotton-page .price {
+    font-size: 25px !important;
+  }
+}
+
+/* WhatsApp: compact icon-only shortcut */
+.whatsapp-help {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #25D366 !important;
+  box-shadow: 0 4px 14px #14243a2b !important;
+}
+.whatsapp-help > span:not(.whatsapp-help-icon) { display: none !important; }
+.whatsapp-help-icon {
+  width: 44px !important;
+  height: 44px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+}
+.whatsapp-help-icon svg { display:block; width:25px; height:25px; }
+
+/* Sticky purchase bar appears only after the visitor scrolls. */
+@media (max-width: 680px) {
+  .mobile-sticky-cta {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translate(-50%, 18px) !important;
+    transition: opacity .22s ease, transform .22s ease, visibility .22s ease !important;
+  }
+  .mobile-sticky-cta.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translate(-50%, 0) !important;
+  }
+  .whatsapp-help {
+    right: 14px !important;
+    bottom: calc(18px + env(safe-area-inset-bottom)) !important;
+    z-index: 90 !important;
+  }
+  body.sticky-cta-visible .whatsapp-help {
+    bottom: calc(82px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+
+/* Product page cleanup: remove collection eyebrow and per-suit descriptor;
+   price sits directly below the quantity selector and above Add to cart. */
+.legend-cotton-page .product-info > .eyebrow {
+  display: none !important;
+}
+.legend-cotton-page .product-info > .product-price-under-quantity {
+  display: block !important;
+  margin: 12px 0 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  text-align: left !important;
+}
+.legend-cotton-page .product-info > .product-price-under-quantity .price {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+
+/* Slightly reduce the three requested product-page text sizes */
+@media (max-width: 680px) {
+  .legend-cotton-page #productTitle {
+    font-size: clamp(32px, 8.2vw, 38px) !important;
+    line-height: 1.04 !important;
   }
 
-  .legend-cotton-page .mobile-sticky-cta .sticky-view-cart {
-    display: none !important;
+  .legend-cotton-page .product-info > .subtitle {
+    font-size: 19px !important;
+    line-height: 1.25 !important;
   }
 
-  .legend-cotton-page .mobile-sticky-cta .sticky-buy-now {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex: 0 1 220px !important;
-    width: min(220px, 100%) !important;
-    min-width: 0 !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+  .legend-cotton-page .selection-heading > span,
+  .legend-cotton-page .selection-heading {
+    font-size: 12px !important;
+    letter-spacing: 0.14em !important;
+  }
+}
+
+@media (min-width: 681px) {
+  .legend-cotton-page #productTitle {
+    font-size: clamp(36px, 3.8vw, 48px) !important;
+  }
+
+  .legend-cotton-page .product-info > .subtitle {
+    font-size: 21px !important;
+  }
+
+  .legend-cotton-page .selection-heading > span,
+  .legend-cotton-page .selection-heading {
+    font-size: 12px !important;
+  }
+}
+
+
+/* Shopify-inspired compact purchase controls */
+.legend-cotton-page .purchase-controls-row {
+  display: flex !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 12px 0 10px !important;
+}
+.legend-cotton-page .purchase-controls-row .product-quantity {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0 !important;
+  min-width: 126px !important;
+  height: 54px !important;
+  border: 1px solid #c9d0d7 !important;
+  border-radius: 4px !important;
+  background: #fffdf8 !important;
+}
+.legend-cotton-page .purchase-controls-row .product-quantity button {
+  width: 38px !important;
+  height: 52px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+.legend-cotton-page .purchase-controls-row .product-quantity output {
+  min-width: 24px !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+}
+.legend-cotton-page .purchase-controls-row .primary-button {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 54px !important;
+  height: 54px !important;
+  margin: 0 !important;
+  padding: 0 18px !important;
+  border-radius: 4px !important;
+  font-size: 15px !important;
+  justify-content: center !important;
+}
+.legend-cotton-page > .buy-now-button,
+.legend-cotton-page .product-info > .buy-now-button {
+  width: 100% !important;
+  min-height: 58px !important;
+  margin: 0 0 12px !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  background: #20b968 !important;
+  color: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  justify-content: center !important;
+}
+.legend-cotton-page .product-info > .buy-now-button span {
+  color: #ffffff !important;
+}
+.legend-cotton-page .product-info > .colour-variation-note {
+  margin-top: 10px !important;
+}
+
+@media (max-width: 680px) {
+  .legend-cotton-page .purchase-controls-row {
+    gap: 9px !important;
+    margin: 10px 0 9px !important;
+  }
+  .legend-cotton-page .purchase-controls-row .product-quantity {
+    min-width: 112px !important;
+    height: 50px !important;
+  }
+  .legend-cotton-page .purchase-controls-row .product-quantity button {
+    width: 34px !important;
+    height: 48px !important;
+  }
+  .legend-cotton-page .purchase-controls-row .primary-button {
+    height: 50px !important;
+    min-height: 50px !important;
+    padding: 0 12px !important;
+    font-size: 14px !important;
+  }
+  .legend-cotton-page .product-info > .buy-now-button {
+    min-height: 54px !important;
+    font-size: 16px !important;
   }
 }
