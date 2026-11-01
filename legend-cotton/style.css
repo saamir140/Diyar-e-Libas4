@@ -1161,3 +1161,18 @@ body.legend-cotton-page { padding-bottom:92px; }
   .swatch { font-size:8px!important; }
   .swatch-colour { width:26px!important; height:26px!important; }
 }
+
+/* Mobile full-outfit image: override the previous 290px landscape crop. */
+@media (max-width:680px) {
+  .legend-cotton-page .main-image, .main-image {
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden;
+  }
+  .legend-cotton-page .main-image > img, .main-image > img {
+    width: 100% !important; height: 100% !important;
+    object-fit: contain !important; object-position: center center !important;
+    mix-blend-mode: normal !important;
+  }
+}
