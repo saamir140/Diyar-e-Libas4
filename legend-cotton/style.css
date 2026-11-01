@@ -1498,3 +1498,21 @@ body.legend-cotton-page { padding-bottom:92px; }
     bottom: calc(82px + env(safe-area-inset-bottom)) !important;
   }
 }
+
+
+/* Product page cleanup: remove collection eyebrow and per-suit descriptor;
+   price sits directly below the quantity selector and above Add to cart. */
+.legend-cotton-page .product-info > .eyebrow {
+  display: none !important;
+}
+.legend-cotton-page .product-info > .product-price-under-quantity {
+  display: block !important;
+  margin: 12px 0 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  text-align: left !important;
+}
+.legend-cotton-page .product-info > .product-price-under-quantity .price {
+  display: inline-block !important;
+  margin: 0 !important;
+}
