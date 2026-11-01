@@ -1048,3 +1048,116 @@ body.legend-cotton-page { padding-bottom:92px; }
 .specification-data-table th{width:38%;color:#738194;font-weight:500;}
 .specification-data-table td{color:#182b43;font-weight:600;}
 @media(max-width:680px){.specification-data-table th,.specification-data-table td{padding:13px 8px;font-size:10px;}.specification-data-table th{width:40%;}}
+
+
+/* =====================================================
+   NOV 01 — MOBILE PURCHASE UX + CLEARER EDITORIAL DESIGN
+   Fixes: sticky rail overflow, compact buying area,
+   stronger section contrast, WhatsApp help shortcut.
+===================================================== */
+.whatsapp-help {
+  position: fixed;
+  z-index: 79;
+  right: 18px;
+  bottom: 92px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px 9px 9px;
+  background: #fdfcf8;
+  color: #182b43;
+  border: 1px solid #cbd8cc;
+  box-shadow: 0 5px 18px #14243a20;
+  border-radius: 4px;
+  font: 11px/1.25 var(--lc-sans);
+}
+.whatsapp-help strong { display:block; color:#176b45; font-size:12px; }
+.whatsapp-help-icon {
+  display:grid; place-items:center; width:30px; height:30px;
+  background:#1f9d61; color:white; border-radius:50%;
+  font:700 14px var(--lc-sans);
+}
+/* The style-story section must read clearly, not disappear into a pale background. */
+.style-section {
+  background: linear-gradient(118deg,#172b43 0%,#203b56 100%) !important;
+  color:#f8f5ee !important;
+  position:relative;
+  overflow:hidden;
+}
+.style-panel h2 { color:#fffdf8 !important; }
+.style-panel p:not(.section-kicker) { color:#e1e7ec !important; font-size:15px; line-height:1.85; }
+.style-panel .section-kicker { color:#d2b77f !important; }
+.style-panel-mark { color:#d2b77f !important; }
+.style-photo { border:1px solid #8da0b2; }
+.style-photo span { background:#f8f5ed!important; color:#182b43!important; }
+/* Make the mobile bottom rail a true, unclipped full-width bar. */
+@media(max-width:680px) {
+  body { padding-bottom: calc(74px + env(safe-area-inset-bottom)); }
+  .mobile-sticky-cta {
+    left:0!important; right:0!important; width:100%!important;
+    bottom:0!important; transform:none!important;
+    display:flex!important; flex-wrap:nowrap!important;
+    min-height:68px; padding:8px 12px calc(8px + env(safe-area-inset-bottom))!important;
+    gap:8px!important; overflow:visible!important;
+    border-left:0!important; border-right:0!important; border-bottom:0!important;
+    border-top:1px solid #cbd2d9!important; border-radius:0!important;
+    background:#fffdf8!important; box-shadow:0 -5px 20px #182b4318!important;
+  }
+  .mobile-sticky-cta button { width:auto!important; max-width:none!important; }
+  .mobile-sticky-cta .sticky-view-cart {
+    flex:1 1 auto!important; min-width:0!important; width:auto!important;
+    display:flex!important; padding:2px 4px!important;
+  }
+  .mobile-sticky-cta .sticky-cta-copy { min-width:0; }
+  .mobile-sticky-cta .sticky-cta-copy small { font-size:8px!important; }
+  .mobile-sticky-cta .sticky-cta-copy strong { font-size:11px!important; }
+  .mobile-sticky-cta .sticky-cta-button { display:inline-flex!important; padding:8px 7px!important; font-size:9px!important; }
+  .mobile-sticky-cta .sticky-buy-now {
+    flex:0 0 auto!important; width:auto!important; min-width:112px!important;
+    min-height:44px!important; padding:0 16px!important;
+    background:#182b43!important; color:#fff!important;
+    border:1px solid #182b43!important; border-radius:3px!important;
+    font:700 12px var(--lc-sans)!important; white-space:nowrap!important;
+  }
+  .whatsapp-help { right:12px; bottom:calc(78px + env(safe-area-inset-bottom)); }
+  /* Compress the product gallery so the shade selector appears much sooner. */
+  .product-shell { padding:8px 16px 28px!important; }
+  .main-image { aspect-ratio:1.28 / 1!important; max-height:290px; }
+  .gallery-thumbnails { gap:6px!important; margin-top:7px!important; }
+  .gallery-thumb { padding-bottom:4px!important; }
+  .gallery-thumb img { aspect-ratio:1.22 / 1!important; }
+  .gallery-thumb span { font-size:9px!important; padding-top:4px!important; }
+  .gallery-caption { display:none!important; }
+  .product-info { padding-top:17px!important; }
+  .eyebrow { margin:0 0 6px!important; font-size:8px!important; }
+  .product-info h1 { font-size:clamp(35px,9.5vw,43px)!important; line-height:1.02!important; margin:5px 0 4px!important; }
+  .subtitle { margin:3px 0 8px!important; font-size:15px!important; }
+  .price-block { padding:0 0 9px!important; gap:10px!important; }
+  .price { font-size:23px!important; }
+  .price-block>span { font-size:9px!important; }
+  .assurance-strip { padding:9px 0!important; margin:0!important; }
+  .assurance-strip>div { padding:0 4px!important; }
+  .assurance-strip strong { font-size:9px!important; }
+  .assurance-strip small { font-size:7px!important; }
+  .selection-block { padding:12px 0 8px!important; }
+  .selection-heading { font-size:11px!important; }
+  .swatch-list { gap:5px!important; margin:10px 0 6px!important; }
+  .swatch { min-width:0!important; padding:3px 1px 4px!important; font-size:9px!important; }
+  .swatch-colour { width:29px!important; height:29px!important; margin-bottom:5px!important; }
+  .selected-colour { font-size:11px!important; margin:7px 0 0!important; }
+  .selected-product,.selection-help { display:none!important; }
+  .colour-variation-note { margin:6px 0 0!important; padding:7px 9px!important; font-size:9px!important; line-height:1.45!important; }
+  .quantity-block { padding:9px 0 8px!important; }
+  .quantity-block>div:first-child small { display:none!important; }
+  .quantity-block .selection-heading { font-size:10px!important; }
+  .product-quantity button { width:29px!important; height:29px!important; }
+  .primary-button { min-height:42px!important; margin-top:4px!important; font-size:11px!important; }
+  .buy-now-button { min-height:46px!important; margin-top:7px!important; font-size:14px!important; }
+}
+@media(max-width:390px) {
+  .mobile-sticky-cta { padding-left:9px!important; padding-right:9px!important; gap:6px!important; }
+  .mobile-sticky-cta .sticky-buy-now { min-width:102px!important; padding:0 11px!important; }
+  .mobile-sticky-cta .sticky-cta-button { display:none!important; }
+  .swatch { font-size:8px!important; }
+  .swatch-colour { width:26px!important; height:26px!important; }
+}
