@@ -1516,3 +1516,38 @@ body.legend-cotton-page { padding-bottom:92px; }
   display: inline-block !important;
   margin: 0 !important;
 }
+
+
+/* Slightly reduce the three requested product-page text sizes */
+@media (max-width: 680px) {
+  .legend-cotton-page #productTitle {
+    font-size: clamp(32px, 8.2vw, 38px) !important;
+    line-height: 1.04 !important;
+  }
+
+  .legend-cotton-page .product-info > .subtitle {
+    font-size: 19px !important;
+    line-height: 1.25 !important;
+  }
+
+  .legend-cotton-page .selection-heading > span,
+  .legend-cotton-page .selection-heading {
+    font-size: 12px !important;
+    letter-spacing: 0.14em !important;
+  }
+}
+
+@media (min-width: 681px) {
+  .legend-cotton-page #productTitle {
+    font-size: clamp(36px, 3.8vw, 48px) !important;
+  }
+
+  .legend-cotton-page .product-info > .subtitle {
+    font-size: 21px !important;
+  }
+
+  .legend-cotton-page .selection-heading > span,
+  .legend-cotton-page .selection-heading {
+    font-size: 12px !important;
+  }
+}
