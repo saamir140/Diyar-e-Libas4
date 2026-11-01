@@ -1381,3 +1381,7 @@ body.legend-cotton-page { padding-bottom:92px; }
   display: flex !important;
   margin-left: auto !important;
 }
+/* Remove product assurance / delivery facts strip */
+.product-facts {
+    display: none !important;
+}
