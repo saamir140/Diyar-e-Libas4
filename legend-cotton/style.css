@@ -1258,3 +1258,81 @@ body.legend-cotton-page { padding-bottom:92px; }
   /* Remove repeated low-priority copy around the buying decision. */
   .selection-help, .selected-product { display:none!important; }
 }
+
+/* FINAL FIX: remove the rectangular tile behind the selected colour.
+   Keep only the circular swatch and its selection ring. */
+.legend-cotton-page .swatch,
+.legend-cotton-page .swatch[aria-pressed="true"],
+.legend-cotton-page .swatch.active,
+.legend-cotton-page .swatch.selected {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+.legend-cotton-page .swatch[aria-pressed="true"] .swatch-colour,
+.legend-cotton-page .swatch.active .swatch-colour,
+.legend-cotton-page .swatch.selected .swatch-colour {
+  outline: 2px solid #536b83 !important;
+  outline-offset: 4px !important;
+  border-radius: 50% !important;
+}
+
+
+/* FINAL COLOUR SWATCH FIX — remove the rectangular selected tile */
+@media (max-width: 900px) {
+  .legend-cotton-page #swatches .swatch,
+  #swatches .swatch,
+  .swatch-list .swatch,
+  .legend-cotton-page .swatch[aria-pressed="true"],
+  .legend-cotton-page .swatch[aria-selected="true"],
+  .legend-cotton-page .swatch.active,
+  .legend-cotton-page .swatch.selected,
+  #swatches .swatch:focus,
+  #swatches .swatch:focus-visible,
+  .swatch-list .swatch:focus,
+  .swatch-list .swatch:focus-visible {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+    padding: 3px 2px 4px !important;
+  }
+
+  .legend-cotton-page #swatches .swatch::before,
+  .legend-cotton-page #swatches .swatch::after,
+  #swatches .swatch::before,
+  #swatches .swatch::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .legend-cotton-page #swatches .swatch .swatch-colour,
+  #swatches .swatch .swatch-colour,
+  .swatch-list .swatch .swatch-colour {
+    display: block !important;
+    border-radius: 50% !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .legend-cotton-page #swatches .swatch[aria-pressed="true"] .swatch-colour,
+  .legend-cotton-page #swatches .swatch[aria-selected="true"] .swatch-colour,
+  .legend-cotton-page #swatches .swatch.active .swatch-colour,
+  .legend-cotton-page #swatches .swatch.selected .swatch-colour,
+  #swatches .swatch[aria-pressed="true"] .swatch-colour,
+  #swatches .swatch.active .swatch-colour,
+  #swatches .swatch.selected .swatch-colour {
+    outline: 2px solid #536b83 !important;
+    outline-offset: 4px !important;
+    border-radius: 50% !important;
+  }
+}
