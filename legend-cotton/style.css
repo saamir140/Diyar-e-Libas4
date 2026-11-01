@@ -1385,3 +1385,7 @@ body.legend-cotton-page { padding-bottom:92px; }
 .product-facts {
     display: none !important;
 }
+/* Remove Delivery, Unstitched & Stitching strip */
+.legend-cotton-page .assurance-strip {
+    display: none !important;
+}
