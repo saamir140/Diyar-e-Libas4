@@ -1360,3 +1360,24 @@ body.legend-cotton-page { padding-bottom:92px; }
 .legend-cotton-page .quantity-block .product-quantity {
   margin-left: auto !important;
 }
+/* Remove unnecessary quantity heading and helper text */
+.legend-cotton-page .quantity-block > div:first-child {
+  display: none !important;
+}
+
+.legend-cotton-page .quantity-block .selection-heading,
+.legend-cotton-page .quantity-block small {
+  display: none !important;
+}
+
+/* Keep quantity buttons visible and aligned right */
+.legend-cotton-page .quantity-block {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.legend-cotton-page .quantity-block .product-quantity {
+  display: flex !important;
+  margin-left: auto !important;
+}
