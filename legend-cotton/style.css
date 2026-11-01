@@ -1389,3 +1389,42 @@ body.legend-cotton-page { padding-bottom:92px; }
 .legend-cotton-page .assurance-strip {
     display: none !important;
 }
+
+
+/* =========================================================
+   NOV 01 — REQUESTED FINAL BUYING-AREA ADJUSTMENTS
+   Quantity selector left; colour disclaimer below Buy Now.
+   ========================================================= */
+.legend-cotton-page .quantity-block {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+.legend-cotton-page .quantity-block .product-quantity {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+.legend-cotton-page .buy-now-button + .colour-variation-note {
+  display: block !important;
+  margin: 12px 0 0 !important;
+  padding: 10px 12px !important;
+  font-size: 11px !important;
+  line-height: 1.55 !important;
+  color: #596b7e !important;
+  background: #e8edf1 !important;
+  border-left: 2px solid #536b83 !important;
+}
+@media (max-width: 680px) {
+  .legend-cotton-page .quantity-block {
+    justify-content: flex-start !important;
+  }
+  .legend-cotton-page .quantity-block .product-quantity {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  .legend-cotton-page .buy-now-button + .colour-variation-note {
+    margin-top: 10px !important;
+    padding: 9px 10px !important;
+    font-size: 10px !important;
+  }
+}
