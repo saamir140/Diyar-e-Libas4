@@ -1199,3 +1199,62 @@ body.legend-cotton-page { padding-bottom:92px; }
     object-position: center center !important;
   }
 }
+
+/* =========================================================
+   MOBILE PRODUCT-PAGE CLARITY PASS
+   CSS-only refinement: stronger type hierarchy, less repetition,
+   clearer buying sequence. No layout/checkout logic changed.
+   ========================================================= */
+@media (max-width:680px) {
+  /* Give the product name clear visual priority. */
+  .product-info h1 {
+    font-size:clamp(38px,10.2vw,46px)!important;
+    line-height:1.04!important;
+    letter-spacing:-1.35px!important;
+    margin:7px 0 5px!important;
+    color:#172b43!important;
+  }
+  .product-info .eyebrow {
+    font-size:9px!important;
+    letter-spacing:2px!important;
+    font-weight:800!important;
+    color:#526b83!important;
+    margin-bottom:8px!important;
+  }
+  .product-info .subtitle {
+    font-size:17px!important;
+    line-height:1.3!important;
+    margin:5px 0 12px!important;
+    color:#718096!important;
+  }
+  .price-block { align-items:baseline!important; padding-bottom:13px!important; }
+  .price { font-size:27px!important; line-height:1!important; font-weight:800!important; color:#172b43!important; }
+  .price-block>span { font-size:10px!important; letter-spacing:1.5px!important; font-weight:800!important; color:#748295!important; }
+
+  /* Keep the three useful facts, but make labels and details distinct. */
+  .assurance-strip { border-top:1px solid #d3d9df!important; border-bottom:1px solid #d3d9df!important; padding:12px 0!important; }
+  .assurance-strip strong { display:block!important; font-size:11px!important; line-height:1.25!important; font-weight:800!important; color:#1d3047!important; }
+  .assurance-strip small { display:block!important; font-size:9px!important; line-height:1.35!important; color:#788493!important; margin-top:4px!important; }
+
+  /* One clear section heading; swatch labels remain readable. */
+  .selection-block { padding:17px 0 12px!important; }
+  .selection-heading { font-size:13px!important; line-height:1.25!important; letter-spacing:2px!important; font-weight:800!important; color:#1b3048!important; }
+  .swatch-list { margin:13px 0 8px!important; gap:6px!important; }
+  .swatch { font-size:10px!important; line-height:1.25!important; font-weight:600!important; color:#536274!important; }
+  .swatch[aria-pressed="true"], .swatch.active, .swatch.selected { color:#172b43!important; font-weight:800!important; }
+  .swatch-colour { width:31px!important; height:31px!important; }
+  /* The selected shade is already obvious from the outlined swatch. */
+  .selected-colour { display:none!important; }
+  .colour-variation-note { font-size:10px!important; line-height:1.5!important; padding:9px 11px!important; margin-top:9px!important; color:#596b7e!important; background:#e8edf1!important; }
+
+  /* Buying controls: distinct heading, quantity, then primary actions. */
+  .quantity-block { border-top:1px solid #d6dce1!important; margin-top:13px!important; padding:15px 0 10px!important; }
+  .quantity-block .selection-heading { font-size:12px!important; letter-spacing:1.8px!important; }
+  .product-quantity button { width:34px!important; height:34px!important; font-size:18px!important; }
+  .product-quantity { gap:13px!important; }
+  .primary-button { min-height:49px!important; margin-top:7px!important; font-size:14px!important; font-weight:800!important; letter-spacing:.1px!important; }
+  .buy-now-button { min-height:54px!important; margin-top:9px!important; font-size:17px!important; font-weight:800!important; letter-spacing:.2px!important; }
+
+  /* Remove repeated low-priority copy around the buying decision. */
+  .selection-help, .selected-product { display:none!important; }
+}
