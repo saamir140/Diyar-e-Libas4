@@ -1,57 +1,130 @@
 {
-  "name": "Wash & Wear",
-  "price": null,
-  "fabricType": "Unstitched fabric",
-  "stitchingIncluded": false,
-  "length": null,
+  "name": "AVENTUS – Premium 4 Season Wash & Wear",
+  "shortName": "AVENTUS",
+  "tagline": "One Suit For All Seasons.",
+  "priceValue": 3900,
+  "currency": "PKR",
+  "length": "4 metres",
+  "fabricType": null,
+  "stitchingIncluded": null,
+  "features": [
+    {
+      "title": "Premium Quality Fabric",
+      "description": "Soft & Luxurious Feel"
+    },
+    {
+      "title": "4 Season Wearable",
+      "description": "Sardi Garmi Dono Ke Liye Behtareen"
+    },
+    {
+      "title": "Wrinkle Free",
+      "description": "No Iron Needed, Always Ready to Wear"
+    },
+    {
+      "title": "Guaranteed Stuff",
+      "description": "Color Guarantee"
+    },
+    {
+      "title": "Full Suit Cutting",
+      "description": "4 Meter – Complete Suit"
+    }
+  ],
+  "closingLine": "Comfort in Summer, Warmth in Winter.",
   "colors": [
     {
       "id": "colour-01",
-      "name": "Colour 01",
-      "hex": "#e8dfce",
-      "image": "assets/images/colour-01.jpg"
+      "name": "Shade 01",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-01/front.jpg",
+        "assets/images/colour-01/back.jpg",
+        "assets/images/colour-01/fabric.jpg",
+        "assets/images/colour-01/detail.jpg"
+      ]
     },
     {
       "id": "colour-02",
-      "name": "Colour 02",
-      "hex": "#292929",
-      "image": "assets/images/colour-02.jpg"
+      "name": "Shade 02",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-02/front.jpg",
+        "assets/images/colour-02/back.jpg",
+        "assets/images/colour-02/fabric.jpg",
+        "assets/images/colour-02/detail.jpg"
+      ]
     },
     {
       "id": "colour-03",
-      "name": "Colour 03",
-      "hex": "#26364a",
-      "image": "assets/images/colour-03.jpg"
+      "name": "Shade 03",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-03/front.jpg",
+        "assets/images/colour-03/back.jpg",
+        "assets/images/colour-03/fabric.jpg",
+        "assets/images/colour-03/detail.jpg"
+      ]
     },
     {
       "id": "colour-04",
-      "name": "Colour 04",
-      "hex": "#777a68",
-      "image": "assets/images/colour-04.jpg"
+      "name": "Shade 04",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-04/front.jpg",
+        "assets/images/colour-04/back.jpg",
+        "assets/images/colour-04/fabric.jpg",
+        "assets/images/colour-04/detail.jpg"
+      ]
     },
     {
       "id": "colour-05",
-      "name": "Colour 05",
-      "hex": "#795d49",
-      "image": "assets/images/colour-05.jpg"
+      "name": "Shade 05",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-05/front.jpg",
+        "assets/images/colour-05/back.jpg",
+        "assets/images/colour-05/fabric.jpg",
+        "assets/images/colour-05/detail.jpg"
+      ]
     },
     {
       "id": "colour-06",
-      "name": "Colour 06",
-      "hex": "#f0eee7",
-      "image": "assets/images/colour-06.jpg"
+      "name": "Shade 06",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-06/front.jpg",
+        "assets/images/colour-06/back.jpg",
+        "assets/images/colour-06/fabric.jpg",
+        "assets/images/colour-06/detail.jpg"
+      ]
     },
     {
       "id": "colour-07",
-      "name": "Colour 07",
-      "hex": "#7b2634",
-      "image": "assets/images/colour-07.jpg"
+      "name": "Shade 07",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-07/front.jpg",
+        "assets/images/colour-07/back.jpg",
+        "assets/images/colour-07/fabric.jpg",
+        "assets/images/colour-07/detail.jpg"
+      ]
     },
     {
       "id": "colour-08",
-      "name": "Colour 08",
-      "hex": "#a5a29a",
-      "image": "assets/images/colour-08.jpg"
+      "name": "Shade 08",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-08/front.jpg",
+        "assets/images/colour-08/back.jpg",
+        "assets/images/colour-08/fabric.jpg",
+        "assets/images/colour-08/detail.jpg"
+      ]
     }
-  ]
+  ],
+  "description": "Premium quality fabric with a soft and luxurious feel, wearable in all four seasons.",
+  "delivery": {
+    "singleSuit": 200,
+    "freeFromQuantity": 2
+  },
+  "whatsapp": "923183621505",
+  "googleSheetsEndpoint": ""
 }
