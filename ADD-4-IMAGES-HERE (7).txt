@@ -1,0 +1,1 @@
+Add the four real product photos in this folder: front.jpg, back.jpg, fabric.jpg, detail.jpg.
