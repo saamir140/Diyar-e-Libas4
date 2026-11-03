@@ -1,0 +1,7 @@
+Replace this note by adding exactly these four JPG files:
+front.jpg
+back.jpg
+fabric.jpg
+detail.jpg
+
+Do not rename the folder. Colour name and swatch will be updated after the real photos are supplied.
