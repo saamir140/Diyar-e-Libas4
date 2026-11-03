@@ -1,30 +1,21 @@
-# DIYAR-E-LIBAS — Website starter
+# DIYAR-E-LIBAS — Integrated static website
 
-A static HTML/CSS/JavaScript foundation for the DIYAR-E-LIBAS premium unstitched fabric store.
+## Root structure
+- `index.html` — homepage (must stay at repository root)
+- `home/home.css` and `home/home.js` — homepage-only styling and behavior
+- `legend-cotton/` — existing Legend Cotton product page
+- `kadhar/` — existing Kadhar product page
+- `wash-n-wear/` — existing Wash & Wear product page
+- `shared/assets/` — shared assets
 
-## Pages
-- `/` — homepage
-- `/legend-cotton/` — 6 colour options
-- `/kadhar/` — 6 colour options
-- `/wash-n-wear/` — 8 colour options
+## GitHub upload
+Upload the **contents of this folder** to the top level of the existing GitHub repository. Do not upload the enclosing `DIYAR-E-LIBAS-Integrated-Site` folder as a nested folder. The repository root should show `index.html`, `home`, `legend-cotton`, `kadhar`, `wash-n-wear`, `shared`, and `README.md` side by side.
 
-## Structure
-Each page has its own HTML, CSS, JavaScript, content JSON, and image directory. Shared brand styling is intentionally kept local to each page for now, so page-specific changes are isolated.
+## Vercel
+Set Root Directory to `./` (repository root). This is a static HTML/CSS/JS site; no build command is required.
 
-## Add product photos
-Place each collection's real photos in its own `assets/images/` folder. Update that collection's `content/products.json` so each colour's `image` value points to the exact filename. Example:
-`"image": "assets/images/black.jpg"`
+## Product photos
+Add actual photos later inside each collection's own `assets/images/` folder and use the filenames already referenced by that collection's `script.js` / `content/products.json`. Do not rename the folders or move product files.
 
-The first colour is selected by default. Clicking a swatch changes the main image to the matching image path. Use descriptive colour names and correct image filenames once the product photos are supplied.
-
-## Before launch
-- Replace homepage image placeholders with supplied brand/product photography.
-- Update all colour names and swatch hex values from actual products.
-- Add verified prices, fabric length and product details.
-- Confirm COD, shipping and returns wording.
-- Connect the chosen checkout/order flow; the current order button is intentionally a non-ordering placeholder.
-- Test mobile and desktop layouts and verify every image path.
-- Enable HTTPS and configure the hosting platform's root directory as this repository.
-
-## Local preview
-Because the collection pages load JSON with `fetch`, preview with a local static server rather than opening the HTML file directly. GitHub Pages and Vercel static hosting work for these files.
+## Important
+Product-page HTML, CSS, JavaScript, and JSON have been carried over without redesign. Homepage navigation uses relative links to all three product folders. Verify product images and checkout/order integrations separately before accepting live orders.
