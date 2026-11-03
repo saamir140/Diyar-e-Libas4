@@ -7,14 +7,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   const $ = (selector) => document.querySelector(selector);
   const swatches=$('#swatches'), mainImage=$('#mainImage'), thumbnails=$('#galleryThumbnails'), selectedName=$('#selectedColour'), selectedProduct=$('#selectedProduct'), counter=$('.image-counter');
   const colors=product.colors||[]; let activeColorIndex=0, activeImageIndex=0;
-  const PRICE=Number(product.priceValue)||3900, DELIVERY=200, STORAGE_KEY='diyarWashWearCartV1';
+  const PRICE=Number(product.priceValue)||3900, DELIVERY=Number(product.delivery?.singleSuit ?? 200), FREE_FROM=Number(product.delivery?.freeFromQuantity ?? 2), STORAGE_KEY='diyarWashWearCartV1';
   let selectedQuantity=1;
   const setText=(selector,value)=>{const node=$(selector);if(node)node.textContent=value;};
   const money=(amount)=>`Rs. ${Number(amount).toLocaleString('en-PK')}`;
-  setText('#productTitle',product.shortName||'AVENTUS'); setText('#colourCount',`${colors.length} colours`); setText('#productPrice',money(PRICE));
+  setText('#productTitle',product.shortName||'AVENTUS'); setText('#productTagline',product.tagline||'One Suit For All Seasons.'); setText('#productDescription',product.description||''); setText('#closingLine',product.closingLine||'Comfort in Summer, Warmth in Winter.'); setText('#colourCount',`${colors.length} colours`); setText('#productPrice',money(PRICE));
   setText('#factFabric',product.fabricType||'Unstitched fabric'); setText('#factStitching',product.stitchingIncluded?'Included':'Not included'); setText('#factLength',product.length||'To be confirmed');
   setText('#detailFabricType',product.fabricType||'Unstitched fabric'); setText('#detailFabricLength',product.length||'To be confirmed'); setText('#specFabric',product.fabricType||'Unstitched fabric'); setText('#specLength',product.length||'To be confirmed'); setText('#specPrice',money(PRICE));
   document.querySelectorAll('.year').forEach(node=>node.textContent=String(new Date().getFullYear()));
+  const featureGrid=$('#featureGrid'); if(featureGrid && Array.isArray(product.features)){ featureGrid.replaceChildren(); product.features.forEach((feature,index)=>{ const card=document.createElement('article'); card.className='benefit-card'; const number=document.createElement('span'); number.className='benefit-index'; number.textContent=String(index+1).padStart(2,'0'); const icon=document.createElement('span'); icon.className='benefit-icon'; icon.textContent=['✦','✳','◇','✧','↗'][index%5]; const heading=document.createElement('h3'); heading.textContent=feature.title||''; const copy=document.createElement('p'); copy.textContent=feature.description||''; card.append(number,icon,heading,copy); featureGrid.append(card); }); }
 
   function imageLabel(index){return ['Front view','Back view','Fabric display','Fabric detail','Additional view'][index]||`Photo ${index+1}`;}
   function showImage(color,colorIndex,imageIndex){const paths=color.images||(color.image?[color.image]:[]),path=paths[imageIndex];if(!path||!mainImage)return;activeColorIndex=colorIndex;activeImageIndex=imageIndex;mainImage.replaceChildren();const img=document.createElement('img');img.src=path;img.alt=`${product.name} – ${color.name} – ${imageLabel(imageIndex)}`;img.loading=imageIndex===0?'eager':'lazy';img.decoding='async';img.addEventListener('error',()=>{if(!img.isConnected)return;const p=document.createElement('div');p.className='image-placeholder';p.innerHTML='<span>IMAGE NOT FOUND</span><small>Check the image file in assets/images</small>';mainImage.replaceChildren(p);},{once:true});mainImage.append(img);const badge=document.createElement('span');badge.className='image-counter';badge.textContent=`${String(imageIndex+1).padStart(2,'0')} / ${String(paths.length).padStart(2,'0')}`;mainImage.append(badge);const caption=document.createElement('span');caption.className='image-caption';caption.textContent=`${imageLabel(imageIndex)} · ${color.name}`;mainImage.append(caption);if(counter)counter.textContent=badge.textContent;if(thumbnails)[...thumbnails.querySelectorAll('button')].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===imageIndex)));}
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Cart is keyed by colour id so each colour keeps its own quantity in one order.
   let cart=[];try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');if(Array.isArray(saved))cart=saved.filter(x=>colors.some(c=>c.id===x.colorId)&&Number.isInteger(x.quantity)&&x.quantity>0);}catch(_){cart=[];}
-  const totalQty=()=>cart.reduce((sum,item)=>sum+item.quantity,0);const subtotal=()=>totalQty()*PRICE;const delivery=()=>totalQty()===0||totalQty()>=2?0:DELIVERY;const grand=()=>subtotal()+delivery();
+  const totalQty=()=>cart.reduce((sum,item)=>sum+item.quantity,0);const subtotal=()=>totalQty()*PRICE;const delivery=()=>totalQty()===0||totalQty()>=FREE_FROM?0:DELIVERY;const grand=()=>subtotal()+delivery();
   function saveCart(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(cart));}catch(_){}}
   function renderCart() {
     const count = totalQty();
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setText('#stickyCartTotal', money(grand()));
 
     const hint = $('#freeDeliveryHint');
-    if (hint) hint.textContent = count >= 2 ? 'You qualify for free delivery.' : count === 1 ? 'Add 1 more suit to get free delivery.' : 'Add 2 suits to get free delivery.';
+    if (hint) hint.textContent = count >= FREE_FROM ? 'You qualify for free delivery.' : count > 0 ? `Add ${FREE_FROM-count} more suit${FREE_FROM-count===1?'':'s'} to get free delivery.` : `Add ${FREE_FROM} suits to get free delivery.`;
 
     const list = $('#cartItems');
     if (list) {
