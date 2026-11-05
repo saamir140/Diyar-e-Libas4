@@ -1648,3 +1648,143 @@ body.wash-wear-page { padding-bottom:92px; }
 .wash-wear-page .whatsapp-float { position:fixed; z-index:75; right:16px; bottom:calc(88px + env(safe-area-inset-bottom)); width:48px; height:48px; display:grid; place-items:center; border-radius:50%; background:#20c96b; color:#fff; box-shadow:0 5px 18px #10243a25; }
 .wash-wear-page .whatsapp-float svg { width:26px; height:26px; }
 @media(max-width:680px){.wash-wear-page .whatsapp-float{right:13px;bottom:calc(82px + env(safe-area-inset-bottom));width:44px;height:44px}.wash-wear-page .product-info h1{font-size:clamp(38px,10vw,52px)}}
+
+
+/* FINAL MOBILE REFINEMENTS — keep the Legend Cotton purchase layout */
+@media (max-width: 680px) {
+  .wash-wear-page #swatches.swatch-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 14px 8px !important;
+    width: 100% !important;
+    margin: 16px auto 12px !important;
+  }
+  .wash-wear-page #swatches .swatch {
+    flex: 0 0 calc(25% - 8px) !important;
+    width: calc(25% - 8px) !important;
+    min-width: 0 !important;
+    max-width: calc(25% - 8px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 4px 1px 6px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+  }
+  .wash-wear-page #swatches .swatch .swatch-colour {
+    display: block !important;
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    margin: 0 auto !important;
+    border-radius: 50% !important;
+  }
+  .wash-wear-page .price-block {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    justify-content: flex-start !important;
+    gap: 8px 13px !important;
+    padding: 17px 0 15px !important;
+    margin: 0 !important;
+    border-top: 1px solid #d7dce0 !important;
+  }
+  .wash-wear-page .price-block .price {
+    display: inline-block !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    font-size: 27px !important;
+    line-height: 1.15 !important;
+  }
+  .wash-wear-page .price-block > span {
+    display: inline-block !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    font-size: 10px !important;
+    letter-spacing: 1.5px !important;
+  }
+  .wash-wear-page .purchase-controls-row {
+    display: grid !important;
+    grid-template-columns: minmax(112px, 34%) minmax(0, 1fr) !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 8px 0 16px !important;
+  }
+  .wash-wear-page .purchase-controls-row .product-quantity {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 58px !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    border: 1px solid #cbd0d4 !important;
+    border-radius: 5px !important;
+    background: #fffdf8 !important;
+  }
+  .wash-wear-page .purchase-controls-row .product-quantity button {
+    width: 28px !important;
+    height: 54px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 21px !important;
+  }
+  .wash-wear-page .purchase-controls-row .product-quantity output {
+    min-width: 18px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+  }
+  .wash-wear-page .purchase-controls-row #addToCartButton {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    white-space: nowrap !important;
+    font-size: 15px !important;
+  }
+  .wash-wear-page .product-info > #buyNowButton {
+    display: flex !important;
+    width: 100% !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    margin: 0 0 12px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+@media (max-width: 390px) {
+  .wash-wear-page #swatches .swatch .swatch-colour {
+    flex-basis: 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+    max-width: 42px !important;
+  }
+  .wash-wear-page .purchase-controls-row {
+    grid-template-columns: minmax(104px, 35%) minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+  .wash-wear-page .purchase-controls-row #addToCartButton {
+    gap: 7px !important;
+    padding: 0 8px !important;
+    font-size: 13px !important;
+  }
+}
