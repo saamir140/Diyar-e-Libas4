@@ -1788,3 +1788,149 @@ body.wash-wear-page { padding-bottom:92px; }
     font-size: 13px !important;
   }
 }
+
+
+/* AVENTUS MOBILE FINAL FIX — match Legend Winter Cotton purchase alignment */
+@media (max-width: 680px) {
+  .wash-wear-page .product-info .price-block,
+  .wash-wear-page .product-info .price-block.product-price-under-quantity {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: baseline !important;
+    justify-content: flex-start !important;
+    column-gap: 16px !important;
+    row-gap: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .wash-wear-page .product-info .price-block .price {
+    flex: 0 0 auto !important;
+    position: static !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+  .wash-wear-page .product-info .price-block > span {
+    flex: 0 0 auto !important;
+    position: static !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+  .wash-wear-page .purchase-controls-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 34%) minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+  .wash-wear-page .purchase-controls-row .quantity-block {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .wash-wear-page .purchase-controls-row .product-quantity {
+    display: flex !important;
+    width: 100% !important;
+    height: 58px !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .wash-wear-page .purchase-controls-row #addToCartButton {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .wash-wear-page .product-info > #buyNowButton {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 58px !important;
+    height: 58px !important;
+    margin: 12px 0 12px !important;
+  }
+  .wash-wear-page .mobile-sticky-cta {
+    position: fixed !important;
+    display: flex !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom)) !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    z-index: 999 !important;
+  }
+  .wash-wear-page .mobile-sticky-cta.is-visible {
+    transform: none !important;
+  }
+  .wash-wear-page .mobile-sticky-cta .sticky-view-cart {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+  .wash-wear-page .mobile-sticky-cta .sticky-buy-now {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 132px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+  .wash-wear-page .whatsapp-float {
+    bottom: calc(86px + env(safe-area-inset-bottom)) !important;
+    z-index: 1000 !important;
+  }
+}
+@media (max-width: 390px) {
+  .wash-wear-page .product-info .price-block {
+    column-gap: 10px !important;
+  }
+  .wash-wear-page .product-info .price-block .price {
+    font-size: 25px !important;
+  }
+  .wash-wear-page .product-info .price-block > span {
+    font-size: 9px !important;
+    letter-spacing: 1px !important;
+  }
+  .wash-wear-page .purchase-controls-row {
+    grid-template-columns: minmax(104px, 35%) minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+  .wash-wear-page .mobile-sticky-cta {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 8px !important;
+  }
+  .wash-wear-page .mobile-sticky-cta .sticky-buy-now {
+    min-width: 112px !important;
+  }
+}
