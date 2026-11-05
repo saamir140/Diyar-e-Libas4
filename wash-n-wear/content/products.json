@@ -5,7 +5,7 @@
   "priceValue": 3900,
   "currency": "PKR",
   "length": "4 metres",
-  "fabricType": "Premium Wash & Wear",
+  "fabricType": null,
   "stitchingIncluded": null,
   "features": [
     {
@@ -33,79 +33,90 @@
   "colors": [
     {
       "id": "colour-01",
-      "name": "Soft Sky Blue",
-      "hex": "#79A8E8",
+      "name": "Shade 01",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-01/front.jpg",
         "assets/images/colour-01/back.jpg",
-        "assets/images/colour-01/hanging.jpg",
+        "assets/images/colour-01/fabric.jpg",
         "assets/images/colour-01/detail.jpg"
       ]
     },
     {
       "id": "colour-02",
-      "name": "Beige",
-      "hex": "#D8C79A",
+      "name": "Shade 02",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-02/front.jpg",
         "assets/images/colour-02/back.jpg",
-        "assets/images/colour-02/hanging.jpg",
+        "assets/images/colour-02/fabric.jpg",
         "assets/images/colour-02/detail.jpg"
       ]
     },
     {
       "id": "colour-03",
-      "name": "Light Olive Mist",
-      "hex": "#A2A88C",
+      "name": "Shade 03",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-03/front.jpg",
         "assets/images/colour-03/back.jpg",
-        "assets/images/colour-03/hanging.jpg",
+        "assets/images/colour-03/fabric.jpg",
         "assets/images/colour-03/detail.jpg"
       ]
     },
     {
       "id": "colour-04",
-      "name": "Dark Ocean Grey",
-      "hex": "#173B50",
+      "name": "Shade 04",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-04/front.jpg",
         "assets/images/colour-04/back.jpg",
-        "assets/images/colour-04/hanging.jpg",
+        "assets/images/colour-04/fabric.jpg",
         "assets/images/colour-04/detail.jpg"
       ]
     },
     {
       "id": "colour-05",
-      "name": "Tobacco Brown",
-      "hex": "#72583E",
+      "name": "Shade 05",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-05/front.jpg",
         "assets/images/colour-05/back.jpg",
-        "assets/images/colour-05/hanging.jpg",
+        "assets/images/colour-05/fabric.jpg",
         "assets/images/colour-05/detail.jpg"
       ]
     },
     {
       "id": "colour-06",
-      "name": "Charcoal Steel",
-      "hex": "#596171",
+      "name": "Shade 06",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-06/front.jpg",
         "assets/images/colour-06/back.jpg",
-        "assets/images/colour-06/hanging.jpg",
+        "assets/images/colour-06/fabric.jpg",
         "assets/images/colour-06/detail.jpg"
       ]
     },
     {
       "id": "colour-07",
-      "name": "Dark Ash",
-      "hex": "#77736F",
+      "name": "Shade 07",
+      "hex": "#c9c9c9",
       "images": [
         "assets/images/colour-07/front.jpg",
         "assets/images/colour-07/back.jpg",
-        "assets/images/colour-07/hanging.jpg",
+        "assets/images/colour-07/fabric.jpg",
         "assets/images/colour-07/detail.jpg"
+      ]
+    },
+    {
+      "id": "colour-08",
+      "name": "Shade 08",
+      "hex": "#c9c9c9",
+      "images": [
+        "assets/images/colour-08/front.jpg",
+        "assets/images/colour-08/back.jpg",
+        "assets/images/colour-08/fabric.jpg",
+        "assets/images/colour-08/detail.jpg"
       ]
     }
   ],
