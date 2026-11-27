@@ -93,15 +93,7 @@ details p { padding: 0 0 14px 18px; }
   .header-content { flex-wrap: wrap; gap: 0 10px; padding-top: 8px; }
   nav { order: 3; width: 100%; justify-content: space-between; }
   nav a, .header-link { font-size: .8rem; }
-  .hero, .shopping-content { grid-template-columns: 1fr; }
-  .hero { margin-top: 16px; }
-  .hero-copy { padding: 26px 22px; }
-  .hero-photo { min-height: 0; aspect-ratio: 1 / 1.04; }
-  .collection-grid { grid-template-columns: 1fr; }
-  .collection-card { display: grid; grid-template-columns: 39% 1fr; min-height: 160px; }
-  .collection-photo { position: relative; aspect-ratio: auto; }
-  .collection-photo img { position: absolute; }
-  .collection-info p { margin-bottom: 8px; }
+  .shopping-content { grid-template-columns: 1fr; }
   .footer-content { flex-wrap: wrap; justify-content: flex-start; gap: 18px 26px; }
   .footer-content .wordmark, .footer-content small { flex-basis: 100%; }
   .footer-content .wordmark span { text-align: left; }
@@ -154,22 +146,28 @@ details p { padding: 0 0 14px 18px; }
 .collection-card:hover .card-cta { text-decoration: underline; text-underline-offset: 4px; }
 
 @media (max-width: 900px) {
-  .collection-action { flex-wrap: wrap; }
+  .hero.container { grid-template-columns: minmax(0, 53fr) minmax(0, 47fr); }
+  .hero-copy { padding: clamp(14px, 4vw, 36px); }
+  .hero .eyebrow { font-size: clamp(.62rem, 1.5vw, .72rem); letter-spacing: .08em; }
+  .hero h1 { max-width: 12ch; margin-block: 9px; font-size: clamp(1.58rem, 5.5vw, 3.35rem); }
+  .hero-description { max-width: 33ch; font-size: clamp(.76rem, 1.9vw, .95rem); }
+  .hero .button { gap: 6px; min-height: 44px; padding: 8px 10px; margin-top: 13px; font-size: clamp(.72rem, 1.8vw, .88rem); }
+  .hero-photo { min-height: 0; }
+  .hero-photo img { object-position: 68% center; }
+  .collections { padding-block: 29px 42px; }
+  .section-heading { margin-bottom: 15px; gap: 6px; }
+  .section-heading p { font-size: .9rem; }
+  .collection-grid { gap: clamp(6px, 1.8vw, 16px); }
+  .collection-photo { aspect-ratio: 1; }
+  .collection-info { padding: clamp(6px, 1.8vw, 16px); }
+  .collection-info h3 { font-size: clamp(.83rem, 2.8vw, 1.45rem); }
+  .collection-action { flex-wrap: wrap; padding-top: 8px; gap: 3px 8px; font-size: clamp(.72rem, 2vw, .88rem); }
+  .collection-action .card-cta { gap: 3px; font-size: clamp(.65rem, 1.8vw, .81rem); }
 }
 
-@media (max-width: 900px) {
-  .hero.container { grid-template-columns: minmax(0, 1fr); }
-  .hero-copy { padding: 24px 5% 26px; }
-  .hero h1 { max-width: 15ch; margin-block: 11px 12px; font-size: clamp(2.4rem, 8vw, 4rem); }
-  .hero-description { max-width: 40ch; font-size: .94rem; }
-  .hero .button { margin-top: 18px; }
-  .hero-photo { min-height: 0; aspect-ratio: 1.6; }
-  .hero-photo img { object-position: center 35%; }
-  .collections { padding-block: 35px 46px; }
-  .section-heading { margin-bottom: 17px; gap: 6px; }
-  .section-heading p { font-size: .9rem; }
-  .collection-grid { gap: 12px; }
-  .collection-card { grid-template-columns: 35% minmax(0, 1fr); min-height: 150px; }
-  .collection-info { padding: 14px; }
-  .collection-action { justify-content: space-between; padding-top: 8px; gap: 4px 8px; font-size: .88rem; }
+@media (max-width: 540px) {
+  .collections { width: 93%; }
+  .collection-info p { display: none; }
+  .collection-info h3 { margin-bottom: 8px; }
+  .collection-action { flex-direction: column; align-items: flex-start; }
 }
