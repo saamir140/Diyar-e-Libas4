@@ -20,8 +20,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   function showImage(color,colorIndex,imageIndex){const paths=color.images||(color.image?[color.image]:[]),path=paths[imageIndex];if(!path||!mainImage)return;activeColorIndex=colorIndex;activeImageIndex=imageIndex;mainImage.replaceChildren();const img=document.createElement('img');img.src=path;img.alt=`${product.name} – ${color.name} – ${imageLabel(imageIndex)}`;img.loading=imageIndex===0?'eager':'lazy';img.decoding='async';img.addEventListener('error',()=>{if(!img.isConnected)return;const p=document.createElement('div');p.className='image-placeholder';p.innerHTML='<span>IMAGE NOT FOUND</span><small>Check the image file in assets/images</small>';mainImage.replaceChildren(p);},{once:true});mainImage.append(img);const badge=document.createElement('span');badge.className='image-counter';badge.textContent=`${String(imageIndex+1).padStart(2,'0')} / ${String(paths.length).padStart(2,'0')}`;mainImage.append(badge);const caption=document.createElement('span');caption.className='image-caption';caption.textContent=`${imageLabel(imageIndex)} · ${color.name}`;mainImage.append(caption);if(counter)counter.textContent=badge.textContent;if(thumbnails)[...thumbnails.querySelectorAll('button')].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===imageIndex)));}
   function renderThumbnails(color,colorIndex){if(!thumbnails)return;thumbnails.replaceChildren();(color.images||(color.image?[color.image]:[])).forEach((path,imageIndex)=>{const b=document.createElement('button');b.type='button';b.className='gallery-thumb';b.setAttribute('aria-label',`${color.name}: ${imageLabel(imageIndex)}`);b.setAttribute('aria-pressed',String(imageIndex===0));const img=document.createElement('img');img.src=path;img.alt='';img.loading='lazy';img.onerror=()=>b.classList.add('thumb-unavailable');const caption=document.createElement('span');caption.textContent=imageLabel(imageIndex);b.append(img,caption);b.addEventListener('click',()=>showImage(color,colorIndex,imageIndex));thumbnails.append(b);});}
   function selectColor(color,index){activeColorIndex=index;activeImageIndex=0;if(selectedName)selectedName.textContent=color.name;if(selectedProduct)selectedProduct.textContent=`${color.name} · ${(color.images||(color.image?[color.image]:[])).length} product photos`;setText('#specColour',color.name);if(swatches)swatches.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));renderThumbnails(color,index);showImage(color,index,0);
-    const images=color.images||(color.image?[color.image]:[]);[ $('#detailPhotoMain'),$('#detailPhotoSecondary') ].forEach((target,i)=>{if(!target)return;const path=images[Math.min(i+2,images.length-1)];if(!path)return;target.replaceChildren();const img=document.createElement('img');img.src=path;img.alt=`${color.name} ${i===0?'fabric display':'fabric detail'}`;img.loading='lazy';img.onerror=()=>target.classList.add('photo-unavailable');target.append(img);});
-    const front=$('#stylePhotoFront'),back=$('#stylePhotoBack');if(front&&images[0]){front.style.backgroundImage=`url("${images[0]}")`;front.setAttribute('aria-label',`${color.name} front view`);}if(back&&images[1]){back.style.backgroundImage=`url("${images[1]}")`;back.setAttribute('aria-label',`${color.name} back view`);}}
+    const images = color.images || (color.image ? [color.image] : []);
+    const views = [
+      ['#detailPhotoMain', images[2], 'fabric display'],
+      ['#detailPhotoSecondary', images[3] || images[0], images[3] ? 'fabric detail' : 'front view'],
+      ['#stylePhotoFront', images[0], 'front view'],
+      ['#stylePhotoBack', images[1], 'back view'],
+    ];
+    for (const [selector, path, label] of views) {
+      const panel = $(selector);
+      if (!panel || !path) continue;
+
+      const photo = document.createElement('img');
+      photo.src = path;
+      photo.alt = `${color.name} — ${label}`;
+      photo.loading = 'lazy';
+      photo.decoding = 'async';
+      const caption = panel.querySelector(':scope > span');
+      panel.replaceChildren(photo);
+      if (caption) panel.append(caption);
+    }
+  }
   if(swatches){swatches.replaceChildren();colors.forEach((color,index)=>{const b=document.createElement('button');b.type='button';b.className='swatch';b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',`Select ${color.name}`);const circle=document.createElement('span');circle.className='swatch-colour';circle.style.backgroundColor=color.hex||'#ddd';circle.setAttribute('aria-hidden','true');const label=document.createElement('span');label.textContent=color.name;b.append(circle,label);b.addEventListener('click',()=>selectColor(color,index));swatches.append(b);});}
   if(colors.length)selectColor(colors[0],0);
 
