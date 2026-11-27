@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
       collection.shades = colors.filter(({ name, hex }) => name && /^#[\da-f]{6}$/i.test(hex));
       if (!collection.shades.length) return;
 
-      const dots = collection.shades.map(({ name, hex }) => {
+      const previewShades = collection.shades.slice(0, 5);
+      const dots = previewShades.map(({ name, hex }) => {
         const dot = document.createElement('span');
         dot.className = 'collection-swatch';
         dot.style.backgroundColor = hex;
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       swatches.setAttribute('role', 'img');
-      swatches.setAttribute('aria-label', `Available shades: ${collection.shades.map(({ name }) => name).join(', ')}`);
+      swatches.setAttribute('aria-label', `Shade preview: ${previewShades.map(({ name }) => name).join(', ')}`);
       swatches.append(...dots);
       swatches.hidden = false;
       if (dialog.open && input.value) renderSearch();
