@@ -2029,3 +2029,28 @@ body.wash-wear-page { padding-bottom:92px; }
 .wash-wear-page #why-aventus .section-kicker { color: #425f53; }
 .wash-wear-page #why-aventus .benefits-heading h2 { color: #223e32; }
 .wash-wear-page #why-aventus .benefits-heading > p:last-child { color: #425f53; }
+
+/* Let each fabric photo set the height of its own frame. */
+.wash-wear-page .fabric-detail-grid { align-items: center; }
+.wash-wear-page .fabric-detail-grid .detail-photo {
+  min-width: 0;
+  min-height: 0;
+  background: transparent;
+}
+.wash-wear-page .fabric-detail-grid .detail-photo img {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  background: transparent;
+}
+.wash-wear-page .fabric-detail-grid .detail-photo .photo-placeholder { min-height: 180px; }
+
+@media (min-width: 681px) and (max-width: 1050px) {
+  .wash-wear-page .fabric-detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wash-wear-page .fabric-detail-grid .detail-copy { grid-column: 1 / -1; grid-row: 1; }
+  .wash-wear-page .fabric-detail-grid .detail-photo-secondary { grid-column: auto; }
+}
+@media (max-width: 680px) {
+  .wash-wear-page .fabric-detail-grid { grid-template-columns: minmax(0, 1fr); }
+  .wash-wear-page .fabric-detail-grid .detail-photo { width: min(100%, 420px); justify-self: center; }
+}
