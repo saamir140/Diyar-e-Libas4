@@ -1013,7 +1013,7 @@ body.wash-wear-page { padding-bottom:92px; }
 
 /* RESTORED LOWER-PAGE SECTIONS — MATCH THE TAILORED BRAND SYSTEM */
 .benefits-section,.included-section,.editorial-section,.style-section,.specifications-section,.ordering-section,.trust-section,.faq-section,.final-cta{border-radius:0!important;}
-.benefits-section{background:#f1eee7!important;color:var(--ink);}
+.benefits-section{background:#e0ebe5!important;color:var(--ink);}
 .benefit-card,.policy-card{border-radius:3px!important;box-shadow:none!important;}
 .benefit-card{background:#fffdf8!important;border:1px solid #d9dfe5!important;}
 .included-section{background:#fffdf8!important;}
@@ -1974,3 +1974,58 @@ body.wash-wear-page { padding-bottom:92px; }
     padding-bottom: env(safe-area-inset-bottom) !important;
   }
 }
+
+/* Product details below the AVENTUS purchase area. */
+.wash-wear-page .fabric-intro {
+  width: min(1240px, 92%);
+  margin: clamp(16px, 3vw, 36px) auto 0;
+  padding: clamp(30px, 5vw, 64px) clamp(12px, 4vw, 48px);
+  border: 1px solid #ddcab1;
+  border-radius: 14px;
+  background: #f1e4d1;
+}
+.wash-wear-page .fabric-intro h2,
+.wash-wear-page .fabric-intro .fabric-specs strong { color: #3c2c20; }
+.wash-wear-page .fabric-intro .section-kicker,
+.wash-wear-page .fabric-intro > p:not(.section-kicker),
+.wash-wear-page .fabric-intro .fabric-specs span { color: #644d3a; }
+.wash-wear-page .fabric-intro .fabric-specs,
+.wash-wear-page .fabric-intro .fabric-specs div { border-color: #cfbba1; }
+
+.wash-wear-page .shade-help {
+  width: min(1120px, 92%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(12px, 5vw, 64px);
+  padding: clamp(32px, 6vw, 72px) 0;
+}
+.wash-wear-page .shade-help h2 { font-size: clamp(1.36rem, 3.8vw, 2.65rem); }
+.wash-wear-page .shade-help > div > p:last-child { color: #49596b; font-size: clamp(.8rem, 1.6vw, .95rem); line-height: 1.55; }
+.shade-guide-photo { width: min(100%, 340px); margin: 0; justify-self: end; }
+.shade-guide-photo img { display: block; width: 100%; height: auto; border-radius: 12px; background: #e5e7e0; }
+.shade-guide-photo figcaption { margin-top: 6px; color: #49596b; font-size: .78rem; text-align: center; }
+
+.wash-wear-page .detail-accordions { display: grid; gap: 9px; border: 0; }
+.wash-wear-page .detail-accordions details {
+  padding-inline: clamp(12px, 2vw, 22px);
+  border: 1px solid #c6d4e0;
+  border-radius: 8px;
+  background: #edf3f8;
+}
+.wash-wear-page .detail-accordions details[open] { border-color: #a1b6c8; }
+.wash-wear-page .detail-accordions summary {
+  min-height: 48px;
+  gap: 10px;
+  padding-block: 12px;
+  font-size: clamp(1rem, 2vw, 1.28rem);
+  font-weight: 600;
+}
+.wash-wear-page .detail-accordions summary span {
+  color: #38536b;
+  font-size: clamp(.7rem, 1.4vw, .85rem);
+  font-weight: 600;
+}
+.wash-wear-page .detail-accordions details p { color: #344a5e; font-size: .9rem; line-height: 1.6; }
+.wash-wear-page #why-aventus .section-kicker { color: #425f53; }
+.wash-wear-page #why-aventus .benefits-heading h2 { color: #223e32; }
+.wash-wear-page #why-aventus .benefits-heading > p:last-child { color: #425f53; }
