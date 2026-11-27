@@ -250,7 +250,6 @@ summary::marker { color: var(--olive); }
   .collection-info h3 { margin-bottom: var(--item-gap); }
   .collection-info p { display: none; }
   .collection-action { flex-direction: column; }
-  .collection-swatches:not([hidden]) { max-width: 85px; min-height: 31px; }
   .assurances strong { min-height: 3.1em; }
   .assurances li { font-size: .72rem; }
 }
