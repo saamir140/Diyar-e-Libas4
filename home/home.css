@@ -43,8 +43,7 @@ a:focus-visible, summary:focus-visible { outline: 2px solid currentColor; outlin
 .wordmark { justify-self: start; font: 600 clamp(1.04rem, 1.8vw, 1.42rem)/1.1 var(--serif); letter-spacing: .055em; white-space: nowrap; }
 .wordmark span { display: block; margin-top: 6px; font: 700 .55rem var(--sans); letter-spacing: .2em; }
 .header-content nav { display: flex; gap: clamp(12px, 3vw, 36px); }
-.header-content nav a, .header-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .86rem; font-weight: 600; }
-.header-link { justify-self: end; gap: 7px; }
+.header-content nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .86rem; font-weight: 600; }
 .header-content a:hover, .footer-content nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 .hero {
@@ -91,12 +90,25 @@ h2 { font: 500 clamp(1.9rem, 3.7vw, 3.25rem)/1.12 var(--serif); letter-spacing: 
 .section-heading { margin-bottom: clamp(16px, 2.6vw, 32px); }
 .collection-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); }
 .collection-card { display: flex; flex-direction: column; min-width: 0; border-bottom: 1px solid var(--line); }
-.collection-photo { aspect-ratio: 5 / 4; background: var(--surface); overflow: hidden; }
+.collection-photo { aspect-ratio: 5 / 4; background: var(--surface); border-radius: clamp(8px, 1.5vw, 18px); overflow: hidden; }
 .collection-photo img { height: 100%; object-fit: cover; }
 .collection-info { display: flex; flex: 1; flex-direction: column; padding-block: clamp(10px, 1.7vw, 20px) clamp(12px, 1.9vw, 22px); }
 .collection-info h3 { font: 600 clamp(.86rem, 2.25vw, 1.65rem)/1.22 var(--serif); }
 .collection-info p { margin: 6px 0 16px; color: var(--muted); font-size: .9rem; }
 .collection-action { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-top: auto; font-size: clamp(.76rem, 1.8vw, .98rem); font-variant-numeric: tabular-nums; }
+.collection-swatches:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 5px;
+  margin-top: 10px;
+}
+.collection-swatch {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #20241d38;
+  border-radius: 50%;
+}
 .card-cta { color: var(--olive); font-size: clamp(.72rem, 1.65vw, .87rem); font-weight: 700; }
 .collection-card:hover .card-cta, .collection-card:focus-visible .card-cta { text-decoration: underline; text-underline-offset: 4px; }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
@@ -126,10 +138,30 @@ details p { padding: 0 0 14px 16px; }
 .footer-content nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .86rem; }
 .footer-copyright { display: block; margin-top: 20px; padding-top: 15px; border-top: 1px solid #596451; color: var(--on-dark-muted); }
 
+.floating-whatsapp {
+  position: fixed;
+  z-index: 3;
+  right: calc(14px + env(safe-area-inset-right));
+  bottom: calc(14px + env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #fffaf0;
+  border-radius: 50%;
+  background: #126844;
+  color: #fff;
+  box-shadow: 0 3px 12px #20261d33;
+}
+.floating-whatsapp:hover { background: #0e5135; }
+.floating-whatsapp:focus-visible { outline: 2px solid var(--olive-dark); box-shadow: 0 0 0 4px var(--paper); }
+.floating-whatsapp svg { width: 27px; height: 27px; }
+
 @media (max-width: 700px) {
-  .header-content { grid-template-columns: 1fr auto; min-height: 0; gap: 0 10px; padding-top: 8px; }
-  .header-content nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; border-top: 1px solid var(--line); }
-  .header-content nav a, .header-link { font-size: .78rem; }
+  .header-content { grid-template-columns: 1fr; min-height: 0; gap: 0 10px; padding-top: 8px; }
+  .header-content .wordmark { display: grid; align-content: center; min-height: 44px; }
+  .header-content nav { grid-row: 2; justify-content: space-between; border-top: 1px solid var(--line); }
+  .header-content nav a { font-size: .78rem; }
   .hero { min-height: clamp(285px, 67vw, 430px); }
   .hero-photo { left: 31%; }
   .hero-photo img { object-position: 69% 40%; }
@@ -148,5 +180,6 @@ details p { padding: 0 0 14px 16px; }
   .collection-info h3 { margin-bottom: 10px; }
   .collection-info p { display: none; }
   .collection-action { flex-direction: column; }
+  .collection-swatches:not([hidden]) { max-width: 67px; min-height: 31px; }
   .assurances li { font-size: .72rem; }
 }
