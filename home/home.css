@@ -179,7 +179,26 @@ h2 { font: 500 var(--title-section)/1.15 var(--serif); letter-spacing: -.035em; 
 
 .assurances { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); padding: clamp(12px, 2vw, 22px) 0; margin-block: 0 var(--heading-gap); border-block: 1px solid var(--line); list-style: none; }
 .assurances li { display: grid; align-content: start; gap: 3px; text-align: start; font-size: .85rem; }
+.assurances svg {
+  width: 21px; height: 21px; margin-bottom: 4px;
+  fill: none; stroke: var(--olive); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+}
 .assurances span { color: var(--muted); font-size: .84em; }
+.featured-fabric {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: var(--grid-gap);
+  margin-block: var(--heading-gap) var(--section-space);
+}
+.feature-copy { padding-block: var(--item-gap); }
+.feature-label { margin-bottom: 6px; color: var(--olive); font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.feature-copy h2 { margin-bottom: var(--item-gap); font-size: var(--title-help); }
+.feature-copy p:not(.feature-label) { max-width: 33ch; color: var(--muted); font-size: .875rem; }
+.feature-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 4px; color: var(--olive); font-size: .85rem; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.feature-photos { grid-column: span 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); }
+.feature-photos img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: clamp(8px, 1.5vw, 18px); background: var(--surface); }
+.feature-photos img:first-child { object-position: center 22%; }
 .shopping-info { background: var(--surface); }
 .shopping-content { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap); padding-block: var(--section-space); }
 .questions { grid-column: span 2; }
@@ -239,6 +258,8 @@ summary::marker { color: var(--olive); }
   .hero-description { max-width: 50%; font-size: .82rem; }
   .eyebrow { max-width: 54%; margin-block: 12px 6px; font-size: .67rem; letter-spacing: .08em; }
   .button { min-height: 44px; margin-top: 16px; padding-inline: 10px; gap: 7px; font-size: .76rem; }
+  .featured-fabric { grid-template-columns: 1fr; gap: var(--item-gap); }
+  .feature-photos { grid-column: auto; }
   .shopping-content { grid-template-columns: 1fr; row-gap: var(--item-gap); }
   .questions { grid-column: auto; }
   .footer-content { grid-template-columns: 1fr 1fr; }
