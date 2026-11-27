@@ -28,20 +28,20 @@
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Premium unstitched menswear</p>
-        <h1 id="hero-title">Tradition, tailored <em>to your taste.</em></h1>
-        <p class="hero-description">Find the fabric for your next shalwar kameez. Choose your shade in cotton, pashmina wool or wash &amp; wear, then have it stitched to your fit.</p>
+        <h1 id="hero-title">Unstitched fabric. <em>Tailored by you.</em></h1>
+        <p class="hero-description">Shop cotton, pashmina wool and wash &amp; wear for your next shalwar kameez.</p>
         <a class="button" href="#collections">Shop collections <span aria-hidden="true">↓</span></a>
       </div>
-      <a class="hero-photo" href="legend-cotton/">
-        <img src="home/images/legend-hero.webp" width="733" height="1100" alt="Dust Taupe Legend Cotton styled as a shalwar kameez" fetchpriority="high">
-        <span class="photo-link">Shop Legend Cotton <span aria-hidden="true">↗</span></span>
-      </a>
+      <picture class="hero-photo">
+        <source media="(max-width: 900px)" srcset="home/images/campaign-mobile.webp">
+        <img src="home/images/campaign.webp" width="1200" height="800" alt="Editorial styling of an olive shalwar kameez in a sandstone courtyard" fetchpriority="high">
+      </picture>
     </section>
 
     <section class="container collections" id="collections" aria-labelledby="collections-title">
       <div class="section-heading">
         <h2 id="collections-title">Find your fabric.</h2>
-        <p>Explore available shades and compare prices by collection.</p>
+        <p>Compare fabrics, shades and prices.</p>
       </div>
       <div class="collection-grid">
         <a class="collection-card" href="legend-cotton/">
@@ -49,7 +49,7 @@
           <div class="collection-info">
             <h3>Legend Cotton</h3>
             <p>Unstitched cotton for everyday wear.</p>
-            <span class="collection-action"><strong>Rs. 3,499</strong><span aria-hidden="true">↗</span></span>
+            <span class="collection-action"><strong>Rs. 3,499</strong><span class="card-cta">View shades <span aria-hidden="true">↗</span></span></span>
           </div>
         </a>
         <a class="collection-card" href="kadhar/">
@@ -57,7 +57,7 @@
           <div class="collection-info">
             <h3>Premium Pashmina Wool</h3>
             <p>A warmer fabric for cooler days.</p>
-            <span class="collection-action"><strong>Rs. 2,799</strong><span aria-hidden="true">↗</span></span>
+            <span class="collection-action"><strong>Rs. 2,799</strong><span class="card-cta">View shades <span aria-hidden="true">↗</span></span></span>
           </div>
         </a>
         <a class="collection-card" href="wash-n-wear/">
@@ -65,7 +65,7 @@
           <div class="collection-info">
             <h3>AVENTUS Wash &amp; Wear</h3>
             <p>Easy-care fabric for regular wear.</p>
-            <span class="collection-action"><strong>Rs. 3,900</strong><span aria-hidden="true">↗</span></span>
+            <span class="collection-action"><strong>Rs. 3,900</strong><span class="card-cta">View shades <span aria-hidden="true">↗</span></span></span>
           </div>
         </a>
       </div>
